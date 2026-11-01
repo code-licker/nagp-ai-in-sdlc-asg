@@ -1,0 +1,47 @@
+diff --git a/backend/src/InvoiceApp.Domain/ApprovalService.cs b/backend/src/InvoiceApp.Domain/ApprovalService.cs
+--- a/backend/src/InvoiceApp.Domain/ApprovalService.cs
++++ b/backend/src/InvoiceApp.Domain/ApprovalService.cs
+@@ -11,9 +11,9 @@ public class ApprovalService
+ {
+-    private readonly IInvoiceRepository _repository;
++    private readonly IInvoiceRepository _invoices;
+
+-    public ApprovalService(IInvoiceRepository repository)
++    public ApprovalService(IInvoiceRepository invoices)
+     {
+-        _repository = repository;
++        _invoices = invoices;
+     }
+
+@@ -24,7 +24,7 @@ public class ApprovalService
+         }
+
+         invoice.Status = InvoiceStatus.PendingApproval;
+-        _repository.Update(invoice);
++        _invoices.Update(invoice);
+         return invoice;
+     }
+
+@@ -36,7 +36,7 @@ public class ApprovalService
+         invoice.Status = InvoiceStatus.Approved;
+         invoice.DecidedBy = approver;
+         invoice.DecidedAt = DateTime.UtcNow;
+-        _repository.Update(invoice);
++        _invoices.Update(invoice);
+         return invoice;
+     }
+
+@@ -52,12 +52,12 @@ public class ApprovalService
+         invoice.Status = InvoiceStatus.Rejected;
+         invoice.DecidedBy = approver;
+         invoice.DecidedAt = DateTime.UtcNow;
+         invoice.DecisionNote = reason;
+-        _repository.Update(invoice);
++        _invoices.Update(invoice);
+         return invoice;
+     }
+
+     private Invoice Find(string invoiceId) =>
+-        _repository.GetById(invoiceId)
++        _invoices.GetById(invoiceId)
+         ?? throw new KeyNotFoundException($"Invoice {invoiceId} was not found.");

@@ -1,0 +1,21 @@
+diff --git a/backend/src/InvoiceApp.Domain/InvoiceFilter.cs b/backend/src/InvoiceApp.Domain/InvoiceFilter.cs
+new file mode 100644
+--- /dev/null
++++ b/backend/src/InvoiceApp.Domain/InvoiceFilter.cs
+@@ -0,0 +1,14 @@
++namespace InvoiceApp.Domain;
++
++/// <summary>
++/// Pure domain specification record for searching and filtering invoice collections.
++/// </summary>
++public record InvoiceFilter(
++    InvoiceStatus? Status = null,
++    string? CustomerPrefix = null,
++    decimal? MinAmount = null)
++{
++    public bool Matches(Invoice invoice) =>
++        (Status is null || invoice.Status == Status) &&
++        (string.IsNullOrWhiteSpace(CustomerPrefix) || invoice.CustomerName.StartsWith(CustomerPrefix, StringComparison.OrdinalIgnoreCase)) &&
++        (MinAmount is null || invoice.Amount >= MinAmount);
++}
+

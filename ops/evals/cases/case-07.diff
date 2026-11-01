@@ -1,0 +1,16 @@
+diff --git a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+--- a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
++++ b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+@@ -28,9 +28,15 @@ public class ApprovalsController : ApiControllerBase
+     [HttpPost("{id}/approve")]
+     [RequireRole("Approver")]
+     public IActionResult Approve(string id)
+     {
+         var invoice = _approvals.Approve(id, CurrentUser.Name);
+
++        _logger.LogInformation(
++            "Approval completed. Invoice payload: {@Invoice}. Session: {@Session}",
++            invoice, CurrentUser);
++
+         return Ok(DecisionResponse.From(invoice));
+     }

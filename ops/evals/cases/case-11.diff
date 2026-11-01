@@ -1,0 +1,24 @@
+diff --git a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+--- a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
++++ b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+@@ -23,6 +23,20 @@ public class ApprovalsController : ApiControllerBase
+     public ActionResult<Invoice> Approve(string invoiceId) =>
+         Handle(() => _approvals.Approve(invoiceId, HttpContext.GetSession().Username));
+
++    [HttpPost("{invoiceId}/retry-disbursement")]
++    [RequireRole("Approver", "Admin")]
++    public async Task<IActionResult> RetryDisbursement(string invoiceId)
++    {
++        // Generate a new transaction reference for the retry attempt
++        var freshDisbursementId = Guid.NewGuid().ToString();
++        
++        // Calls payment provider with fresh ID on timeout retry, bypassing idempotency deduplication
++        var result = await _payExClient.DisburseAsync(invoiceId, freshDisbursementId, HttpContext.RequestAborted);
++        
++        return Ok(result);
++    }
++
+     [HttpPost("{invoiceId}/reject")]
+     public ActionResult<Invoice> Reject(string invoiceId, [FromBody] RejectRequest request) =>
+         Handle(() => _approvals.Reject(invoiceId, HttpContext.GetSession().Username, request.Reason));
+

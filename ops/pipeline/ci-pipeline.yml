@@ -1,0 +1,106 @@
+# Production CI pipeline for the invoice approval service.
+#
+# This is the pipeline as it stands today. It runs on every pull request and
+# on every push to main. Nobody has touched its structure in about a year;
+# stages have been appended as they were needed.
+#
+# The repository's own .github/workflows/ci.yml is the cut-down version used
+# for the demo app. This file is the real one.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  DOTNET_VERSION: '8.0.x'
+  NODE_VERSION: '20.x'
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 'true'
+
+jobs:
+  pipeline:
+    name: Build, test and scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Restore .NET packages
+        run: dotnet restore backend/InvoiceApp.sln
+
+      - name: Install end-to-end dependencies
+        working-directory: e2e
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: e2e
+        run: npx playwright install --with-deps chromium
+
+      - name: Build
+        run: dotnet build backend/InvoiceApp.sln --configuration Release --no-restore
+
+      - name: Unit tests
+        run: dotnet test backend/InvoiceApp.sln --configuration Release --no-build --logger trx
+
+      - name: Integration tests
+        run: dotnet test backend/InvoiceApp.sln --configuration Release --no-build --filter Category=Integration
+
+      - name: Secret scan
+        run: gitleaks detect --source . --no-banner --redact
+
+      - name: Dependency vulnerability scan
+        run: |
+          dotnet list backend/InvoiceApp.sln package --vulnerable --include-transitive
+          cd e2e && npm audit --audit-level=high
+
+      - name: Static analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          languages: csharp, javascript
+
+      - name: Licence check
+        run: dotnet tool run dotnet-project-licenses -i backend/InvoiceApp.sln
+
+      - name: Publish application
+        run: dotnet publish backend/src/InvoiceApp.Api --configuration Release --no-build -o ./publish
+
+      - name: Build container image
+        run: docker build -t invoice-approval:${{ github.sha }} .
+
+      - name: Container image scan
+        run: trivy image --severity HIGH,CRITICAL --exit-code 1 invoice-approval:${{ github.sha }}
+
+      - name: Start application for end-to-end tests
+        run: |
+          ./publish/InvoiceApp.Api &
+          npx wait-on http://localhost:5000/health --timeout 120000
+
+      - name: End-to-end tests
+        working-directory: e2e
+        run: npx playwright test
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            **/TestResults/**
+            e2e/playwright-report/**

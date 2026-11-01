@@ -1,0 +1,472 @@
+# Application log export
+# Service: invoice-approval  Environment: production
+# Window: 2026-01-14 09:40:00Z to 2026-01-14 11:10:00Z
+# Exported by: platform-tools v4.2  Export time: 2026-01-14T11:14:03Z
+# Levels present: INFO, WARN, ERROR
+
+2026-01-14T09:40:15.080Z  INFO  [Approvals] POST /api/invoices/INV-41571/approve instance=web-02 user=p.iyer elapsed_ms=62 status=200
+2026-01-14T09:40:28.914Z  INFO  [Approvals] POST /api/invoices/INV-41708/approve instance=web-01 user=t.adeyemi elapsed_ms=119 status=200
+2026-01-14T09:41:07.588Z  INFO  [Approvals] POST /api/invoices/INV-41265/approve instance=web-02 user=k.matsuda elapsed_ms=94 status=200
+2026-01-14T09:41:15.271Z  INFO  [Approvals] POST /api/invoices/INV-41349/approve instance=web-02 user=a.oyelaran elapsed_ms=113 status=200
+2026-01-14T09:41:34.813Z  INFO  [Approvals] POST /api/invoices/INV-41622/approve instance=web-01 user=s.brennan elapsed_ms=117 status=200
+2026-01-14T09:41:50.949Z  INFO  [Approvals] POST /api/invoices/INV-41639/approve instance=web-02 user=s.brennan elapsed_ms=74 status=200
+2026-01-14T09:42:00.860Z  INFO  [Approvals] POST /api/invoices/INV-41134/approve instance=web-02 user=d.whitfield elapsed_ms=72 status=200
+2026-01-14T09:42:05.786Z  INFO  [Approvals] POST /api/invoices/INV-41953/approve instance=web-02 user=l.novotny elapsed_ms=51 status=200
+2026-01-14T09:42:20.045Z  INFO  [Approvals] POST /api/invoices/INV-41701/approve instance=web-01 user=k.matsuda elapsed_ms=70 status=200
+2026-01-14T09:42:41.301Z  INFO  [Approvals] POST /api/invoices/INV-41754/approve instance=web-01 user=p.iyer elapsed_ms=103 status=200
+2026-01-14T09:43:07.178Z  INFO  [Approvals] POST /api/invoices/INV-41951/approve instance=web-02 user=l.novotny elapsed_ms=117 status=200
+2026-01-14T09:43:18.112Z  INFO  [Approvals] POST /api/invoices/INV-41595/approve instance=web-02 user=k.matsuda elapsed_ms=109 status=200
+2026-01-14T09:43:21.570Z  INFO  [Approvals] POST /api/invoices/INV-41873/approve instance=web-01 user=k.matsuda elapsed_ms=88 status=200
+2026-01-14T09:43:39.590Z  INFO  [Approvals] POST /api/invoices/INV-41853/approve instance=web-03 user=d.whitfield elapsed_ms=89 status=200
+2026-01-14T09:43:55.920Z  INFO  [Approvals] POST /api/invoices/INV-41813/approve instance=web-03 user=d.whitfield elapsed_ms=78 status=200
+2026-01-14T09:44:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T09:44:08.270Z  INFO  [Approvals] POST /api/invoices/INV-41534/approve instance=web-02 user=t.adeyemi elapsed_ms=61 status=200
+2026-01-14T09:44:10.657Z  INFO  [Approvals] POST /api/invoices/INV-41851/approve instance=web-02 user=d.whitfield elapsed_ms=49 status=200
+2026-01-14T09:44:25.225Z  INFO  [Approvals] POST /api/invoices/INV-41484/approve instance=web-01 user=s.brennan elapsed_ms=112 status=200
+2026-01-14T09:45:06.665Z  INFO  [Approvals] POST /api/invoices/INV-41381/approve instance=web-03 user=k.matsuda elapsed_ms=113 status=200
+2026-01-14T09:45:09.698Z  INFO  [Approvals] POST /api/invoices/INV-41421/approve instance=web-03 user=d.whitfield elapsed_ms=120 status=200
+2026-01-14T09:45:16.062Z  INFO  [Approvals] POST /api/invoices/INV-41596/approve instance=web-01 user=k.matsuda elapsed_ms=64 status=200
+2026-01-14T09:45:30.442Z  INFO  [Approvals] POST /api/invoices/INV-41248/approve instance=web-01 user=l.novotny elapsed_ms=64 status=200
+2026-01-14T09:46:24.412Z  INFO  [Approvals] POST /api/invoices/INV-41154/approve instance=web-02 user=s.brennan elapsed_ms=53 status=200
+2026-01-14T09:46:49.474Z  INFO  [Approvals] POST /api/invoices/INV-41426/approve instance=web-01 user=a.oyelaran elapsed_ms=88 status=200
+2026-01-14T09:46:50.162Z  INFO  [Approvals] POST /api/invoices/INV-41159/approve instance=web-02 user=p.iyer elapsed_ms=104 status=200
+2026-01-14T09:47:27.259Z  INFO  [Approvals] POST /api/invoices/INV-41080/approve instance=web-03 user=m.rao elapsed_ms=84 status=200
+2026-01-14T09:47:28.676Z  INFO  [Approvals] POST /api/invoices/INV-41456/approve instance=web-01 user=a.oyelaran elapsed_ms=49 status=200
+2026-01-14T09:47:53.238Z  INFO  [Approvals] POST /api/invoices/INV-41829/approve instance=web-01 user=t.adeyemi elapsed_ms=112 status=200
+2026-01-14T09:48:15.340Z  INFO  [Approvals] POST /api/invoices/INV-41283/approve instance=web-03 user=l.novotny elapsed_ms=58 status=200
+2026-01-14T09:48:16.309Z  INFO  [Approvals] POST /api/invoices/INV-41570/approve instance=web-03 user=t.adeyemi elapsed_ms=84 status=200
+2026-01-14T09:48:29.794Z  INFO  [Approvals] POST /api/invoices/INV-41305/approve instance=web-01 user=m.rao elapsed_ms=117 status=200
+2026-01-14T09:49:09.459Z  INFO  [Approvals] POST /api/invoices/INV-41322/approve instance=web-01 user=m.rao elapsed_ms=72 status=200
+2026-01-14T09:49:41.829Z  INFO  [Approvals] POST /api/invoices/INV-41210/approve instance=web-02 user=s.brennan elapsed_ms=116 status=200
+2026-01-14T09:50:12.996Z  INFO  [Approvals] POST /api/invoices/INV-41450/approve instance=web-01 user=m.rao elapsed_ms=70 status=200
+2026-01-14T09:50:20.700Z  INFO  [Approvals] POST /api/invoices/INV-41611/approve instance=web-01 user=t.adeyemi elapsed_ms=59 status=200
+2026-01-14T09:50:42.029Z  INFO  [Approvals] POST /api/invoices/INV-41759/approve instance=web-03 user=k.matsuda elapsed_ms=49 status=200
+2026-01-14T09:50:59.444Z  INFO  [Approvals] POST /api/invoices/INV-41061/approve instance=web-03 user=d.whitfield elapsed_ms=100 status=200
+2026-01-14T09:51:05.330Z  INFO  [Approvals] POST /api/invoices/INV-41416/approve instance=web-03 user=l.novotny elapsed_ms=89 status=200
+2026-01-14T09:51:10.002Z  INFO  [Approvals] POST /api/invoices/INV-41542/approve instance=web-03 user=t.adeyemi elapsed_ms=89 status=200
+2026-01-14T09:51:20.708Z  INFO  [Approvals] POST /api/invoices/INV-41021/approve instance=web-03 user=p.iyer elapsed_ms=107 status=200
+2026-01-14T09:51:24.400Z  INFO  [Approvals] POST /api/invoices/INV-41639/approve instance=web-01 user=s.brennan elapsed_ms=77 status=200
+2026-01-14T09:51:46.517Z  INFO  [Approvals] POST /api/invoices/INV-41186/approve instance=web-01 user=a.oyelaran elapsed_ms=54 status=200
+2026-01-14T09:52:03.861Z  INFO  [Approvals] POST /api/invoices/INV-41058/approve instance=web-01 user=l.novotny elapsed_ms=96 status=200
+2026-01-14T09:52:12.834Z  INFO  [Approvals] POST /api/invoices/INV-41178/approve instance=web-02 user=m.rao elapsed_ms=95 status=200
+2026-01-14T09:52:53.695Z  INFO  [Approvals] POST /api/invoices/INV-41070/approve instance=web-03 user=p.iyer elapsed_ms=60 status=200
+2026-01-14T09:53:27.944Z  INFO  [Approvals] POST /api/invoices/INV-41035/approve instance=web-01 user=t.adeyemi elapsed_ms=62 status=200
+2026-01-14T09:53:53.549Z  INFO  [Approvals] POST /api/invoices/INV-41107/approve instance=web-02 user=s.brennan elapsed_ms=117 status=200
+2026-01-14T09:53:54.430Z  INFO  [Approvals] POST /api/invoices/INV-41193/approve instance=web-02 user=d.whitfield elapsed_ms=69 status=200
+2026-01-14T09:54:13.448Z  INFO  [Approvals] POST /api/invoices/INV-41010/approve instance=web-01 user=m.rao elapsed_ms=72 status=200
+2026-01-14T09:54:30.584Z  INFO  [Approvals] POST /api/invoices/INV-41956/approve instance=web-01 user=l.novotny elapsed_ms=77 status=200
+2026-01-14T09:54:37.041Z  INFO  [Approvals] POST /api/invoices/INV-41324/approve instance=web-03 user=a.oyelaran elapsed_ms=65 status=200
+2026-01-14T09:54:56.044Z  INFO  [Approvals] POST /api/invoices/INV-41215/approve instance=web-03 user=p.iyer elapsed_ms=75 status=200
+2026-01-14T09:54:59.092Z  INFO  [Approvals] POST /api/invoices/INV-41863/approve instance=web-01 user=a.oyelaran elapsed_ms=84 status=200
+2026-01-14T09:55:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T09:55:27.953Z  INFO  [Approvals] POST /api/invoices/INV-41594/approve instance=web-02 user=t.adeyemi elapsed_ms=106 status=200
+2026-01-14T09:55:50.353Z  INFO  [Approvals] POST /api/invoices/INV-41558/approve instance=web-03 user=m.rao elapsed_ms=82 status=200
+2026-01-14T09:56:45.419Z  INFO  [Approvals] POST /api/invoices/INV-41373/approve instance=web-03 user=s.brennan elapsed_ms=58 status=200
+2026-01-14T09:56:46.633Z  INFO  [Approvals] POST /api/invoices/INV-41624/approve instance=web-01 user=p.iyer elapsed_ms=103 status=200
+2026-01-14T09:56:49.351Z  INFO  [Approvals] POST /api/invoices/INV-41664/approve instance=web-03 user=s.brennan elapsed_ms=109 status=200
+2026-01-14T09:57:07.929Z  INFO  [Approvals] POST /api/invoices/INV-41861/approve instance=web-03 user=m.rao elapsed_ms=53 status=200
+2026-01-14T09:57:20.085Z  INFO  [Approvals] POST /api/invoices/INV-41840/approve instance=web-03 user=p.iyer elapsed_ms=95 status=200
+2026-01-14T09:57:33.005Z  INFO  [Approvals] POST /api/invoices/INV-41531/approve instance=web-02 user=p.iyer elapsed_ms=107 status=200
+2026-01-14T09:58:00.000Z  INFO  [Deploy] Starting deployment release=2.14.0 commit=7c41ab9 previous=2.13.4 commit=1de90f2
+2026-01-14T09:58:41.000Z  INFO  [Deploy] Swap completed release=2.14.0 instances=3 warmup_ok=true
+2026-01-14T09:58:49.363Z  INFO  [Approvals] POST /api/invoices/INV-41987/approve instance=web-02 user=l.novotny elapsed_ms=115 status=200
+2026-01-14T09:58:57.621Z  INFO  [Approvals] POST /api/invoices/INV-41752/approve instance=web-01 user=d.whitfield elapsed_ms=73 status=200
+2026-01-14T09:59:14.679Z  INFO  [Approvals] POST /api/invoices/INV-41812/approve instance=web-03 user=p.iyer elapsed_ms=108 status=200
+2026-01-14T09:59:23.081Z  INFO  [Approvals] POST /api/invoices/INV-41888/approve instance=web-03 user=m.rao elapsed_ms=105 status=200
+2026-01-14T09:59:25.469Z  INFO  [Approvals] POST /api/invoices/INV-41884/approve instance=web-02 user=m.rao elapsed_ms=91 status=200
+2026-01-14T09:59:29.885Z  INFO  [Approvals] POST /api/invoices/INV-41565/approve instance=web-01 user=a.oyelaran elapsed_ms=53 status=200
+2026-01-14T09:59:50.029Z  INFO  [Approvals] POST /api/invoices/INV-41811/approve instance=web-03 user=d.whitfield elapsed_ms=70 status=200
+2026-01-14T10:00:00.000Z  INFO  [Approvals] Approval volume for the last 5 minutes: 384 (7-day average for this window: 96)
+2026-01-14T10:00:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T10:00:24.023Z  INFO  [Approvals] POST /api/invoices/INV-41174/approve instance=web-01 user=k.matsuda elapsed_ms=75 status=200
+2026-01-14T10:00:34.893Z  INFO  [Approvals] POST /api/invoices/INV-41234/approve instance=web-02 user=a.oyelaran elapsed_ms=61 status=200
+2026-01-14T10:01:16.619Z  INFO  [Approvals] POST /api/invoices/INV-41340/approve instance=web-03 user=t.adeyemi elapsed_ms=53 status=200
+2026-01-14T10:01:26.621Z  INFO  [Approvals] POST /api/invoices/INV-41707/approve instance=web-02 user=d.whitfield elapsed_ms=67 status=200
+2026-01-14T10:02:09.872Z  INFO  [Approvals] POST /api/invoices/INV-41394/approve instance=web-01 user=a.oyelaran elapsed_ms=87 status=200
+2026-01-14T10:02:48.387Z  INFO  [Approvals] POST /api/invoices/INV-41890/approve instance=web-02 user=d.whitfield elapsed_ms=69 status=200
+2026-01-14T10:02:57.208Z  INFO  [Approvals] POST /api/invoices/INV-41140/approve instance=web-02 user=t.adeyemi elapsed_ms=68 status=200
+2026-01-14T10:03:00.000Z  WARN  [Platform] Instance web-03 recycled by host (reason=routine_maintenance) downtime_ms=4200
+2026-01-14T10:03:00.343Z  INFO  [Approvals] POST /api/invoices/INV-41382/approve instance=web-02 user=a.oyelaran elapsed_ms=225 status=200
+2026-01-14T10:03:05.000Z  INFO  [Platform] Instance web-03 healthy, back in rotation
+2026-01-14T10:03:05.009Z  INFO  [Approvals] POST /api/invoices/INV-41146/approve instance=web-02 user=l.novotny elapsed_ms=267 status=200
+2026-01-14T10:03:08.621Z  INFO  [Approvals] POST /api/invoices/INV-41956/approve instance=web-02 user=t.adeyemi elapsed_ms=144 status=200
+2026-01-14T10:03:17.076Z  INFO  [Approvals] POST /api/invoices/INV-41202/approve instance=web-02 user=d.whitfield elapsed_ms=287 status=200
+2026-01-14T10:04:02.688Z  INFO  [Approvals] POST /api/invoices/INV-41522/approve instance=web-01 user=t.adeyemi elapsed_ms=449 status=200
+2026-01-14T10:04:07.500Z  INFO  [Approvals] POST /api/invoices/INV-41260/approve instance=web-01 user=t.adeyemi elapsed_ms=239 status=200
+2026-01-14T10:04:07.511Z  INFO  [Approvals] POST /api/invoices/INV-41697/approve instance=web-02 user=l.novotny elapsed_ms=386 status=200
+2026-01-14T10:04:08.340Z  INFO  [Approvals] POST /api/invoices/INV-41521/approve instance=web-02 user=d.whitfield elapsed_ms=348 status=200
+2026-01-14T10:05:09.437Z  INFO  [Approvals] POST /api/invoices/INV-41176/approve instance=web-01 user=d.whitfield elapsed_ms=712 status=200
+2026-01-14T10:05:30.271Z  INFO  [Approvals] POST /api/invoices/INV-41024/approve instance=web-01 user=l.novotny elapsed_ms=788 status=200
+2026-01-14T10:06:16.146Z  INFO  [Approvals] POST /api/invoices/INV-41121/approve instance=web-02 user=m.rao elapsed_ms=958 status=200
+2026-01-14T10:06:16.841Z  INFO  [Approvals] POST /api/invoices/INV-41972/approve instance=web-03 user=t.adeyemi elapsed_ms=618 status=200
+2026-01-14T10:06:26.341Z  INFO  [Approvals] POST /api/invoices/INV-41982/approve instance=web-03 user=k.matsuda elapsed_ms=640 status=200
+2026-01-14T10:06:30.126Z  INFO  [Approvals] POST /api/invoices/INV-41594/approve instance=web-03 user=d.whitfield elapsed_ms=490 status=200
+2026-01-14T10:06:51.494Z  INFO  [Approvals] POST /api/invoices/INV-41415/approve instance=web-02 user=m.rao elapsed_ms=470 status=200
+2026-01-14T10:07:12.964Z  INFO  [Approvals] POST /api/invoices/INV-41268/approve instance=web-02 user=m.rao elapsed_ms=1069 status=200
+2026-01-14T10:07:30.808Z  INFO  [Approvals] POST /api/invoices/INV-41343/approve instance=web-02 user=p.iyer elapsed_ms=313 status=200
+2026-01-14T10:07:41.149Z  INFO  [Approvals] POST /api/invoices/INV-41975/approve instance=web-02 user=l.novotny elapsed_ms=628 status=200
+2026-01-14T10:07:42.801Z  INFO  [Approvals] POST /api/invoices/INV-41865/approve instance=web-03 user=p.iyer elapsed_ms=943 status=200
+2026-01-14T10:07:44.577Z  INFO  [Approvals] POST /api/invoices/INV-41693/approve instance=web-02 user=m.rao elapsed_ms=550 status=200
+2026-01-14T10:08:04.137Z  INFO  [Approvals] POST /api/invoices/INV-41487/approve instance=web-02 user=p.iyer elapsed_ms=260 status=200
+2026-01-14T10:08:22.255Z  INFO  [Approvals] POST /api/invoices/INV-41801/approve instance=web-03 user=l.novotny elapsed_ms=1491 status=200
+2026-01-14T10:08:24.927Z  INFO  [Approvals] POST /api/invoices/INV-41225/approve instance=web-02 user=d.whitfield elapsed_ms=717 status=200
+2026-01-14T10:08:42.042Z  INFO  [Approvals] POST /api/invoices/INV-41384/approve instance=web-03 user=k.matsuda elapsed_ms=734 status=200
+2026-01-14T10:09:15.044Z  INFO  [Approvals] POST /api/invoices/INV-41690/approve instance=web-01 user=m.rao elapsed_ms=1199 status=200
+2026-01-14T10:09:27.082Z  INFO  [Approvals] POST /api/invoices/INV-41480/approve instance=web-03 user=k.matsuda elapsed_ms=1333 status=200
+2026-01-14T10:10:03.500Z  INFO  [Approvals] POST /api/invoices/INV-41285/approve instance=web-01 user=a.oyelaran elapsed_ms=452 status=200
+2026-01-14T10:10:19.553Z  INFO  [Approvals] POST /api/invoices/INV-41451/approve instance=web-02 user=m.rao elapsed_ms=1253 status=200
+2026-01-14T10:10:47.364Z  INFO  [Approvals] POST /api/invoices/INV-41893/approve instance=web-02 user=m.rao elapsed_ms=1068 status=200
+2026-01-14T10:10:47.398Z  INFO  [Approvals] POST /api/invoices/INV-41521/approve instance=web-02 user=p.iyer elapsed_ms=367 status=200
+2026-01-14T10:11:05.502Z  INFO  [Approvals] POST /api/invoices/INV-41299/approve instance=web-02 user=m.rao elapsed_ms=439 status=200
+2026-01-14T10:11:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T10:11:46.399Z  INFO  [Approvals] POST /api/invoices/INV-41475/approve instance=web-03 user=p.iyer elapsed_ms=227 status=200
+2026-01-14T10:12:07.467Z  INFO  [Approvals] POST /api/invoices/INV-41421/approve instance=web-01 user=t.adeyemi elapsed_ms=1673 status=200
+2026-01-14T10:12:19.557Z  INFO  [Approvals] POST /api/invoices/INV-41379/approve instance=web-01 user=t.adeyemi elapsed_ms=1798 status=200
+2026-01-14T10:12:33.678Z  INFO  [Approvals] POST /api/invoices/INV-41001/approve instance=web-02 user=m.rao elapsed_ms=724 status=200
+2026-01-14T10:12:53.290Z  INFO  [Approvals] POST /api/invoices/INV-41389/approve instance=web-01 user=s.brennan elapsed_ms=1471 status=200
+2026-01-14T10:13:04.949Z  INFO  [Approvals] POST /api/invoices/INV-41599/approve instance=web-01 user=l.novotny elapsed_ms=505 status=200
+2026-01-14T10:13:11.237Z  INFO  [Approvals] POST /api/invoices/INV-41255/approve instance=web-02 user=l.novotny elapsed_ms=2665 status=200
+2026-01-14T10:13:14.686Z  WARN  [Approvals] POST /api/invoices/INV-41873/approve instance=web-01 user=a.oyelaran elapsed_ms=14560 status=500
+2026-01-14T10:13:25.417Z  INFO  [Approvals] POST /api/invoices/INV-41833/approve instance=web-03 user=k.matsuda elapsed_ms=269 status=200
+2026-01-14T10:13:27.515Z  INFO  [Approvals] POST /api/invoices/INV-41187/approve instance=web-03 user=l.novotny elapsed_ms=1360 status=200
+2026-01-14T10:13:37.444Z  INFO  [Approvals] POST /api/invoices/INV-41060/approve instance=web-02 user=t.adeyemi elapsed_ms=234 status=200
+2026-01-14T10:14:00.486Z  INFO  [Approvals] POST /api/invoices/INV-41722/approve instance=web-01 user=m.rao elapsed_ms=1008 status=200
+2026-01-14T10:14:28.288Z  INFO  [Approvals] POST /api/invoices/INV-41497/approve instance=web-03 user=p.iyer elapsed_ms=2543 status=200
+2026-01-14T10:14:38.037Z  INFO  [Approvals] POST /api/invoices/INV-41888/approve instance=web-02 user=d.whitfield elapsed_ms=2122 status=200
+2026-01-14T10:14:55.671Z  INFO  [Approvals] POST /api/invoices/INV-41051/approve instance=web-02 user=k.matsuda elapsed_ms=1214 status=200
+2026-01-14T10:15:01.202Z  INFO  [Approvals] POST /api/invoices/INV-41461/approve instance=web-01 user=m.rao elapsed_ms=756 status=200
+2026-01-14T10:15:01.916Z  INFO  [Approvals] POST /api/invoices/INV-41902/approve instance=web-02 user=k.matsuda elapsed_ms=1011 status=200
+2026-01-14T10:15:37.324Z  INFO  [Approvals] POST /api/invoices/INV-41800/approve instance=web-03 user=a.oyelaran elapsed_ms=1093 status=200
+2026-01-14T10:15:50.368Z  WARN  [Approvals] POST /api/invoices/INV-41384/approve instance=web-01 user=l.novotny elapsed_ms=25390 status=500
+2026-01-14T10:15:53.855Z  INFO  [Approvals] POST /api/invoices/INV-41101/approve instance=web-03 user=d.whitfield elapsed_ms=1009 status=200
+2026-01-14T10:15:56.641Z  INFO  [Approvals] POST /api/invoices/INV-41719/approve instance=web-03 user=k.matsuda elapsed_ms=1850 status=200
+2026-01-14T10:16:31.314Z  INFO  [Approvals] POST /api/invoices/INV-41007/approve instance=web-02 user=k.matsuda elapsed_ms=1187 status=200
+2026-01-14T10:16:38.297Z  INFO  [Approvals] POST /api/invoices/INV-41359/approve instance=web-01 user=l.novotny elapsed_ms=3377 status=200
+2026-01-14T10:16:57.449Z  INFO  [Approvals] POST /api/invoices/INV-41267/approve instance=web-03 user=p.iyer elapsed_ms=2657 status=200
+2026-01-14T10:17:09.982Z  INFO  [Approvals] POST /api/invoices/INV-41969/approve instance=web-03 user=d.whitfield elapsed_ms=2949 status=200
+2026-01-14T10:17:20.322Z  INFO  [Approvals] POST /api/invoices/INV-41609/approve instance=web-02 user=m.rao elapsed_ms=3261 status=200
+2026-01-14T10:17:30.219Z  INFO  [Approvals] POST /api/invoices/INV-41998/approve instance=web-01 user=l.novotny elapsed_ms=355 status=200
+2026-01-14T10:17:31.455Z  INFO  [Approvals] POST /api/invoices/INV-41773/approve instance=web-03 user=l.novotny elapsed_ms=1857 status=200
+2026-01-14T10:17:34.219Z  INFO  [Approvals] POST /api/invoices/INV-41450/approve instance=web-02 user=l.novotny elapsed_ms=2915 status=200
+2026-01-14T10:18:04.081Z  INFO  [Approvals] POST /api/invoices/INV-41425/approve instance=web-03 user=a.oyelaran elapsed_ms=1373 status=200
+2026-01-14T10:18:07.113Z  INFO  [Approvals] POST /api/invoices/INV-41491/approve instance=web-01 user=p.iyer elapsed_ms=2164 status=200
+2026-01-14T10:18:08.570Z  INFO  [Approvals] POST /api/invoices/INV-41583/approve instance=web-03 user=m.rao elapsed_ms=3642 status=200
+2026-01-14T10:18:11.783Z  INFO  [Approvals] POST /api/invoices/INV-41596/approve instance=web-01 user=a.oyelaran elapsed_ms=1854 status=200
+2026-01-14T10:18:55.214Z  INFO  [Approvals] POST /api/invoices/INV-41876/approve instance=web-02 user=a.oyelaran elapsed_ms=2867 status=200
+2026-01-14T10:19:13.471Z  INFO  [Approvals] POST /api/invoices/INV-41002/approve instance=web-01 user=m.rao elapsed_ms=860 status=200
+2026-01-14T10:19:15.978Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41872) instance=web-01
+2026-01-14T10:19:43.644Z  INFO  [Approvals] POST /api/invoices/INV-41265/approve instance=web-02 user=t.adeyemi elapsed_ms=1896 status=200
+2026-01-14T10:19:49.856Z  INFO  [Approvals] POST /api/invoices/INV-41925/approve instance=web-01 user=l.novotny elapsed_ms=3811 status=200
+2026-01-14T10:19:55.365Z  INFO  [Approvals] POST /api/invoices/INV-41551/approve instance=web-03 user=m.rao elapsed_ms=732 status=200
+2026-01-14T10:20:15.281Z  WARN  [Approvals] POST /api/invoices/INV-41075/approve instance=web-01 user=a.oyelaran elapsed_ms=19100 status=500
+2026-01-14T10:20:17.679Z  INFO  [Approvals] POST /api/invoices/INV-41746/approve instance=web-02 user=a.oyelaran elapsed_ms=1260 status=200
+2026-01-14T10:20:37.789Z  INFO  [Approvals] POST /api/invoices/INV-41382/approve instance=web-03 user=p.iyer elapsed_ms=3668 status=200
+2026-01-14T10:20:53.650Z  INFO  [Approvals] POST /api/invoices/INV-41484/approve instance=web-02 user=p.iyer elapsed_ms=2180 status=200
+2026-01-14T10:21:12.436Z  INFO  [Approvals] POST /api/invoices/INV-41884/approve instance=web-01 user=d.whitfield elapsed_ms=2420 status=200
+2026-01-14T10:21:28.808Z  INFO  [Approvals] POST /api/invoices/INV-41293/approve instance=web-02 user=a.oyelaran elapsed_ms=595 status=200
+2026-01-14T10:21:29.933Z  WARN  [Approvals] POST /api/invoices/INV-41988/approve instance=web-02 user=m.rao elapsed_ms=23527 status=500
+2026-01-14T10:21:36.361Z  INFO  [Approvals] POST /api/invoices/INV-41472/approve instance=web-01 user=l.novotny elapsed_ms=4326 status=200
+2026-01-14T10:21:52.317Z  WARN  [Approvals] POST /api/invoices/INV-41360/approve instance=web-02 user=d.whitfield elapsed_ms=21256 status=500
+2026-01-14T10:21:52.725Z  INFO  [Approvals] POST /api/invoices/INV-41340/approve instance=web-01 user=l.novotny elapsed_ms=4488 status=200
+2026-01-14T10:22:01.239Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41743) instance=web-01
+2026-01-14T10:22:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T10:22:08.178Z  WARN  [Approvals] POST /api/invoices/INV-41619/approve instance=web-03 user=l.novotny elapsed_ms=17372 status=500
+2026-01-14T10:22:45.152Z  INFO  [Approvals] POST /api/invoices/INV-41643/approve instance=web-03 user=s.brennan elapsed_ms=1201 status=200
+2026-01-14T10:22:52.251Z  INFO  [Approvals] POST /api/invoices/INV-41859/approve instance=web-02 user=a.oyelaran elapsed_ms=770 status=200
+2026-01-14T10:22:53.948Z  INFO  [Approvals] POST /api/invoices/INV-41490/approve instance=web-01 user=t.adeyemi elapsed_ms=1409 status=200
+2026-01-14T10:23:10.404Z  INFO  [Approvals] POST /api/invoices/INV-41731/approve instance=web-01 user=k.matsuda elapsed_ms=608 status=200
+2026-01-14T10:23:19.845Z  INFO  [Approvals] POST /api/invoices/INV-41595/approve instance=web-02 user=l.novotny elapsed_ms=4041 status=200
+2026-01-14T10:23:23.437Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41786) instance=web-01
+2026-01-14T10:23:38.159Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41607) instance=web-03
+2026-01-14T10:23:48.773Z  INFO  [Approvals] POST /api/invoices/INV-41583/approve instance=web-03 user=s.brennan elapsed_ms=3999 status=200
+2026-01-14T10:23:55.107Z  INFO  [Approvals] POST /api/invoices/INV-41340/approve instance=web-03 user=p.iyer elapsed_ms=3869 status=200
+2026-01-14T10:24:11.087Z  INFO  [Approvals] POST /api/invoices/INV-41988/approve instance=web-01 user=a.oyelaran elapsed_ms=4395 status=200
+2026-01-14T10:24:41.258Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41835) instance=web-02
+2026-01-14T10:24:57.186Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41539) instance=web-02
+2026-01-14T10:24:57.669Z  INFO  [Approvals] POST /api/invoices/INV-41050/approve instance=web-01 user=l.novotny elapsed_ms=670 status=200
+2026-01-14T10:25:07.193Z  WARN  [Approvals] POST /api/invoices/INV-41088/approve instance=web-01 user=d.whitfield elapsed_ms=22288 status=500
+2026-01-14T10:25:07.302Z  INFO  [Approvals] POST /api/invoices/INV-41058/approve instance=web-02 user=p.iyer elapsed_ms=1779 status=200
+2026-01-14T10:25:15.272Z  INFO  [Approvals] POST /api/invoices/INV-41359/approve instance=web-01 user=t.adeyemi elapsed_ms=1826 status=200
+2026-01-14T10:25:19.778Z  INFO  [Approvals] POST /api/invoices/INV-41400/approve instance=web-02 user=p.iyer elapsed_ms=2216 status=200
+2026-01-14T10:25:23.136Z  INFO  [Approvals] POST /api/invoices/INV-41304/approve instance=web-03 user=l.novotny elapsed_ms=3306 status=200
+2026-01-14T10:25:27.998Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41273) instance=web-01
+2026-01-14T10:26:07.284Z  WARN  [Approvals] POST /api/invoices/INV-41808/approve instance=web-02 user=l.novotny elapsed_ms=11926 status=500
+2026-01-14T10:26:13.563Z  INFO  [Approvals] POST /api/invoices/INV-41033/approve instance=web-02 user=s.brennan elapsed_ms=1017 status=200
+2026-01-14T10:26:15.963Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41477) instance=web-03
+2026-01-14T10:26:17.404Z  INFO  [Approvals] POST /api/invoices/INV-41952/approve instance=web-01 user=p.iyer elapsed_ms=4627 status=200
+2026-01-14T10:26:21.210Z  INFO  [Approvals] POST /api/invoices/INV-41104/approve instance=web-03 user=l.novotny elapsed_ms=2013 status=200
+2026-01-14T10:26:37.081Z  INFO  [Approvals] POST /api/invoices/INV-41497/approve instance=web-02 user=k.matsuda elapsed_ms=924 status=200
+2026-01-14T10:26:45.119Z  INFO  [Approvals] POST /api/invoices/INV-41889/approve instance=web-01 user=l.novotny elapsed_ms=4774 status=200
+2026-01-14T10:27:01.072Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41998) instance=web-01
+2026-01-14T10:27:01.471Z  INFO  [Approvals] POST /api/invoices/INV-41360/approve instance=web-02 user=s.brennan elapsed_ms=4087 status=200
+2026-01-14T10:27:05.176Z  INFO  [Approvals] POST /api/invoices/INV-41957/approve instance=web-02 user=p.iyer elapsed_ms=544 status=200
+2026-01-14T10:27:30.294Z  INFO  [Approvals] POST /api/invoices/INV-41768/approve instance=web-03 user=t.adeyemi elapsed_ms=5583 status=200
+2026-01-14T10:27:36.054Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41375) instance=web-02
+2026-01-14T10:27:49.218Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41163) instance=web-02
+2026-01-14T10:28:14.336Z  INFO  [Approvals] POST /api/invoices/INV-41825/approve instance=web-02 user=l.novotny elapsed_ms=718 status=200
+2026-01-14T10:28:25.017Z  INFO  [Approvals] POST /api/invoices/INV-41239/approve instance=web-01 user=d.whitfield elapsed_ms=2640 status=200
+2026-01-14T10:28:26.795Z  INFO  [Approvals] POST /api/invoices/INV-41485/approve instance=web-03 user=s.brennan elapsed_ms=947 status=200
+2026-01-14T10:29:06.051Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41390) instance=web-02
+2026-01-14T10:29:11.299Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41036) instance=web-03
+2026-01-14T10:29:16.334Z  INFO  [Approvals] POST /api/invoices/INV-41685/approve instance=web-01 user=l.novotny elapsed_ms=1056 status=200
+2026-01-14T10:29:19.106Z  INFO  [Approvals] POST /api/invoices/INV-41149/approve instance=web-01 user=k.matsuda elapsed_ms=2136 status=200
+2026-01-14T10:29:44.124Z  INFO  [Approvals] POST /api/invoices/INV-41362/approve instance=web-03 user=p.iyer elapsed_ms=1261 status=200
+2026-01-14T10:30:05.882Z  INFO  [Approvals] POST /api/invoices/INV-41095/approve instance=web-03 user=d.whitfield elapsed_ms=953 status=200
+2026-01-14T10:30:24.479Z  INFO  [Approvals] POST /api/invoices/INV-41711/approve instance=web-01 user=d.whitfield elapsed_ms=1889 status=200
+2026-01-14T10:30:27.936Z  INFO  [Approvals] POST /api/invoices/INV-41551/approve instance=web-02 user=d.whitfield elapsed_ms=2009 status=200
+2026-01-14T10:30:34.918Z  WARN  [Approvals] POST /api/invoices/INV-41711/approve instance=web-01 user=d.whitfield elapsed_ms=25949 status=500
+2026-01-14T10:30:38.988Z  INFO  [Approvals] POST /api/invoices/INV-41263/approve instance=web-03 user=l.novotny elapsed_ms=887 status=200
+2026-01-14T10:30:44.168Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41253) instance=web-01
+2026-01-14T10:31:22.163Z  INFO  [Approvals] POST /api/invoices/INV-41640/approve instance=web-02 user=m.rao elapsed_ms=4123 status=200
+2026-01-14T10:31:25.573Z  INFO  [Approvals] POST /api/invoices/INV-41833/approve instance=web-02 user=m.rao elapsed_ms=1454 status=200
+2026-01-14T10:31:34.928Z  INFO  [Approvals] POST /api/invoices/INV-41149/approve instance=web-02 user=m.rao elapsed_ms=3472 status=200
+2026-01-14T10:32:00.652Z  INFO  [Approvals] POST /api/invoices/INV-41266/approve instance=web-01 user=k.matsuda elapsed_ms=800 status=200
+2026-01-14T10:32:18.779Z  INFO  [Approvals] POST /api/invoices/INV-41442/approve instance=web-01 user=s.brennan elapsed_ms=945 status=200
+2026-01-14T10:32:20.884Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41927) instance=web-02
+2026-01-14T10:32:21.848Z  INFO  [Approvals] POST /api/invoices/INV-41799/approve instance=web-02 user=s.brennan elapsed_ms=5260 status=200
+2026-01-14T10:32:23.312Z  INFO  [Approvals] POST /api/invoices/INV-41848/approve instance=web-02 user=p.iyer elapsed_ms=4992 status=200
+2026-01-14T10:32:36.697Z  WARN  [Approvals] POST /api/invoices/INV-41942/approve instance=web-03 user=m.rao elapsed_ms=24268 status=500
+2026-01-14T10:32:40.896Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41150) instance=web-03
+2026-01-14T10:32:56.006Z  INFO  [Approvals] POST /api/invoices/INV-41827/approve instance=web-01 user=s.brennan elapsed_ms=3643 status=200
+2026-01-14T10:33:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T10:33:10.818Z  INFO  [Approvals] POST /api/invoices/INV-41256/approve instance=web-03 user=s.brennan elapsed_ms=4354 status=200
+2026-01-14T10:33:15.518Z  INFO  [Approvals] POST /api/invoices/INV-41730/approve instance=web-01 user=t.adeyemi elapsed_ms=2083 status=200
+2026-01-14T10:33:28.278Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41418) instance=web-02
+2026-01-14T10:33:33.585Z  INFO  [Approvals] POST /api/invoices/INV-41925/approve instance=web-01 user=m.rao elapsed_ms=2659 status=200
+2026-01-14T10:33:52.892Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41054) instance=web-02
+2026-01-14T10:33:54.538Z  INFO  [Approvals] POST /api/invoices/INV-41446/approve instance=web-02 user=t.adeyemi elapsed_ms=5367 status=200
+2026-01-14T10:34:16.327Z  INFO  [Approvals] POST /api/invoices/INV-41000/approve instance=web-02 user=s.brennan elapsed_ms=3621 status=200
+2026-01-14T10:34:16.519Z  WARN  [Approvals] POST /api/invoices/INV-41771/approve instance=web-02 user=l.novotny elapsed_ms=21723 status=500
+2026-01-14T10:34:16.697Z  INFO  [Approvals] POST /api/invoices/INV-41966/approve instance=web-03 user=p.iyer elapsed_ms=5719 status=200
+2026-01-14T10:34:19.006Z  INFO  [Approvals] POST /api/invoices/INV-41801/approve instance=web-03 user=s.brennan elapsed_ms=1919 status=200
+2026-01-14T10:34:44.297Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41760) instance=web-03
+2026-01-14T10:34:52.269Z  WARN  [Approvals] POST /api/invoices/INV-41454/approve instance=web-02 user=t.adeyemi elapsed_ms=17812 status=500
+2026-01-14T10:34:54.657Z  INFO  [Approvals] POST /api/invoices/INV-41407/approve instance=web-02 user=l.novotny elapsed_ms=7360 status=200
+2026-01-14T10:34:56.773Z  INFO  [Approvals] POST /api/invoices/INV-41280/approve instance=web-02 user=l.novotny elapsed_ms=6747 status=200
+2026-01-14T10:35:04.555Z  INFO  [Approvals] POST /api/invoices/INV-41440/approve instance=web-02 user=l.novotny elapsed_ms=1926 status=200
+2026-01-14T10:35:07.592Z  WARN  [Approvals] POST /api/invoices/INV-41394/approve instance=web-01 user=a.oyelaran elapsed_ms=18773 status=500
+2026-01-14T10:35:10.799Z  WARN  [Approvals] POST /api/invoices/INV-41901/approve instance=web-02 user=a.oyelaran elapsed_ms=16143 status=500
+2026-01-14T10:35:25.489Z  INFO  [Approvals] POST /api/invoices/INV-41315/approve instance=web-02 user=l.novotny elapsed_ms=6183 status=200
+2026-01-14T10:35:30.968Z  INFO  [Approvals] POST /api/invoices/INV-41530/approve instance=web-03 user=s.brennan elapsed_ms=7075 status=200
+2026-01-14T10:35:35.663Z  INFO  [Approvals] POST /api/invoices/INV-41359/approve instance=web-02 user=s.brennan elapsed_ms=3955 status=200
+2026-01-14T10:35:40.131Z  INFO  [Approvals] POST /api/invoices/INV-41353/approve instance=web-03 user=a.oyelaran elapsed_ms=5159 status=200
+2026-01-14T10:36:00.232Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41342) instance=web-03
+2026-01-14T10:36:00.923Z  INFO  [Approvals] POST /api/invoices/INV-41176/approve instance=web-03 user=p.iyer elapsed_ms=5447 status=200
+2026-01-14T10:36:09.086Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41140) instance=web-02
+2026-01-14T10:36:29.518Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41650) instance=web-02
+2026-01-14T10:36:39.465Z  INFO  [Approvals] POST /api/invoices/INV-41811/approve instance=web-02 user=s.brennan elapsed_ms=2814 status=200
+2026-01-14T10:36:51.962Z  INFO  [Approvals] POST /api/invoices/INV-41630/approve instance=web-01 user=s.brennan elapsed_ms=5108 status=200
+2026-01-14T10:36:54.252Z  INFO  [Approvals] POST /api/invoices/INV-41490/approve instance=web-02 user=p.iyer elapsed_ms=1016 status=200
+2026-01-14T10:37:07.439Z  INFO  [Approvals] POST /api/invoices/INV-41698/approve instance=web-02 user=a.oyelaran elapsed_ms=7272 status=200
+2026-01-14T10:37:13.605Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41748) instance=web-01
+2026-01-14T10:37:21.549Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41305) instance=web-03
+2026-01-14T10:37:38.880Z  INFO  [Approvals] POST /api/invoices/INV-41081/approve instance=web-03 user=l.novotny elapsed_ms=7644 status=200
+2026-01-14T10:37:39.943Z  INFO  [Approvals] POST /api/invoices/INV-41599/approve instance=web-02 user=k.matsuda elapsed_ms=4099 status=200
+2026-01-14T10:37:42.425Z  INFO  [Approvals] POST /api/invoices/INV-41763/approve instance=web-03 user=a.oyelaran elapsed_ms=5672 status=200
+2026-01-14T10:37:43.430Z  INFO  [Approvals] POST /api/invoices/INV-41071/approve instance=web-02 user=l.novotny elapsed_ms=7497 status=200
+2026-01-14T10:37:47.210Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41273) instance=web-03
+2026-01-14T10:38:01.737Z  INFO  [Approvals] POST /api/invoices/INV-41266/approve instance=web-02 user=m.rao elapsed_ms=1886 status=200
+2026-01-14T10:38:05.385Z  INFO  [Approvals] POST /api/invoices/INV-41801/approve instance=web-01 user=m.rao elapsed_ms=3372 status=200
+2026-01-14T10:38:33.669Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41491) instance=web-01
+2026-01-14T10:38:56.342Z  INFO  [Approvals] POST /api/invoices/INV-41824/approve instance=web-02 user=a.oyelaran elapsed_ms=2681 status=200
+2026-01-14T10:39:05.337Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41044) instance=web-03
+2026-01-14T10:39:13.318Z  INFO  [Approvals] POST /api/invoices/INV-41719/approve instance=web-02 user=k.matsuda elapsed_ms=1324 status=200
+2026-01-14T10:39:14.351Z  INFO  [Approvals] POST /api/invoices/INV-41504/approve instance=web-03 user=s.brennan elapsed_ms=6946 status=200
+2026-01-14T10:39:14.569Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41137) instance=web-02
+2026-01-14T10:39:31.670Z  INFO  [Approvals] POST /api/invoices/INV-41336/approve instance=web-01 user=t.adeyemi elapsed_ms=6369 status=200
+2026-01-14T10:39:37.202Z  INFO  [Approvals] POST /api/invoices/INV-41819/approve instance=web-03 user=p.iyer elapsed_ms=1791 status=200
+2026-01-14T10:39:43.669Z  WARN  [Approvals] POST /api/invoices/INV-41013/approve instance=web-01 user=d.whitfield elapsed_ms=15919 status=500
+2026-01-14T10:39:47.541Z  WARN  [Approvals] POST /api/invoices/INV-41544/approve instance=web-02 user=l.novotny elapsed_ms=17585 status=500
+2026-01-14T10:39:57.948Z  INFO  [Approvals] POST /api/invoices/INV-41980/approve instance=web-01 user=s.brennan elapsed_ms=5658 status=200
+2026-01-14T10:40:02.442Z  INFO  [Approvals] POST /api/invoices/INV-41894/approve instance=web-03 user=a.oyelaran elapsed_ms=6627 status=200
+2026-01-14T10:40:06.273Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41551) instance=web-02
+2026-01-14T10:40:37.622Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41670) instance=web-02
+2026-01-14T10:40:38.215Z  INFO  [Approvals] POST /api/invoices/INV-41551/approve instance=web-01 user=m.rao elapsed_ms=914 status=200
+2026-01-14T10:40:42.881Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41096) instance=web-01
+2026-01-14T10:40:48.931Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41666) instance=web-03
+2026-01-14T10:40:59.118Z  WARN  [Approvals] POST /api/invoices/INV-41863/approve instance=web-02 user=a.oyelaran elapsed_ms=16038 status=500
+2026-01-14T10:41:15.343Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41870) instance=web-03
+2026-01-14T10:41:20.176Z  INFO  [Approvals] POST /api/invoices/INV-41519/approve instance=web-03 user=m.rao elapsed_ms=4770 status=200
+2026-01-14T10:41:55.874Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41363) instance=web-01
+2026-01-14T10:41:58.813Z  INFO  [Approvals] POST /api/invoices/INV-41485/approve instance=web-03 user=s.brennan elapsed_ms=1741 status=200
+2026-01-14T10:42:00.546Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41819) instance=web-02
+2026-01-14T10:42:04.613Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41367) instance=web-01
+2026-01-14T10:42:08.104Z  INFO  [Approvals] POST /api/invoices/INV-41945/approve instance=web-01 user=p.iyer elapsed_ms=5518 status=200
+2026-01-14T10:42:11.946Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41467) instance=web-03
+2026-01-14T10:42:33.836Z  INFO  [Approvals] POST /api/invoices/INV-41343/approve instance=web-02 user=m.rao elapsed_ms=7233 status=200
+2026-01-14T10:42:37.354Z  INFO  [Approvals] POST /api/invoices/INV-41413/approve instance=web-02 user=k.matsuda elapsed_ms=4369 status=200
+2026-01-14T10:42:37.545Z  INFO  [Approvals] POST /api/invoices/INV-41706/approve instance=web-03 user=k.matsuda elapsed_ms=1858 status=200
+2026-01-14T10:42:47.538Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41936) instance=web-01
+2026-01-14T10:43:11.677Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41051) instance=web-01
+2026-01-14T10:43:13.517Z  INFO  [Approvals] POST /api/invoices/INV-41454/approve instance=web-01 user=m.rao elapsed_ms=7485 status=200
+2026-01-14T10:43:14.569Z  INFO  [Approvals] POST /api/invoices/INV-41316/approve instance=web-01 user=l.novotny elapsed_ms=8891 status=200
+2026-01-14T10:43:17.183Z  INFO  [Approvals] POST /api/invoices/INV-41662/approve instance=web-01 user=a.oyelaran elapsed_ms=1541 status=200
+2026-01-14T10:43:31.868Z  INFO  [Approvals] POST /api/invoices/INV-41992/approve instance=web-01 user=t.adeyemi elapsed_ms=8547 status=200
+2026-01-14T10:43:58.427Z  INFO  [Approvals] POST /api/invoices/INV-41482/approve instance=web-02 user=k.matsuda elapsed_ms=1862 status=200
+2026-01-14T10:44:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T10:44:11.821Z  INFO  [Approvals] POST /api/invoices/INV-41307/approve instance=web-03 user=a.oyelaran elapsed_ms=8692 status=200
+2026-01-14T10:44:12.941Z  INFO  [Approvals] POST /api/invoices/INV-41281/approve instance=web-02 user=a.oyelaran elapsed_ms=4534 status=200
+2026-01-14T10:44:13.350Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41803) instance=web-03
+2026-01-14T10:44:23.519Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41657) instance=web-03
+2026-01-14T10:44:37.541Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41855) instance=web-02
+2026-01-14T10:44:51.922Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41515) instance=web-01
+2026-01-14T10:44:54.313Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41984) instance=web-01
+2026-01-14T10:45:13.696Z  INFO  [Approvals] POST /api/invoices/INV-41857/approve instance=web-01 user=a.oyelaran elapsed_ms=1361 status=200
+2026-01-14T10:45:16.924Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41264) instance=web-03
+2026-01-14T10:45:52.160Z  INFO  [Approvals] POST /api/invoices/INV-41627/approve instance=web-01 user=k.matsuda elapsed_ms=7631 status=200
+2026-01-14T10:45:57.690Z  INFO  [Approvals] POST /api/invoices/INV-41824/approve instance=web-01 user=m.rao elapsed_ms=8749 status=200
+2026-01-14T10:46:08.927Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41487) instance=web-03
+2026-01-14T10:46:09.339Z  INFO  [Approvals] POST /api/invoices/INV-41801/approve instance=web-01 user=l.novotny elapsed_ms=7402 status=200
+2026-01-14T10:46:22.324Z  INFO  [Approvals] POST /api/invoices/INV-41998/approve instance=web-02 user=l.novotny elapsed_ms=5357 status=200
+2026-01-14T10:46:35.692Z  INFO  [Approvals] POST /api/invoices/INV-41977/approve instance=web-01 user=k.matsuda elapsed_ms=7319 status=200
+2026-01-14T10:46:41.114Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41821) instance=web-02
+2026-01-14T10:46:47.349Z  INFO  [Approvals] POST /api/invoices/INV-41759/approve instance=web-01 user=p.iyer elapsed_ms=6733 status=200
+2026-01-14T10:46:57.289Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41245) instance=web-01
+2026-01-14T10:47:04.742Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41779) instance=web-01
+2026-01-14T10:47:09.738Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41176) instance=web-02
+2026-01-14T10:47:09.757Z  INFO  [Approvals] POST /api/invoices/INV-41903/approve instance=web-02 user=m.rao elapsed_ms=4702 status=200
+2026-01-14T10:47:16.447Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41652) instance=web-01
+2026-01-14T10:47:47.428Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41099) instance=web-01
+2026-01-14T10:47:48.227Z  INFO  [Approvals] POST /api/invoices/INV-41866/approve instance=web-03 user=l.novotny elapsed_ms=4960 status=200
+2026-01-14T10:47:51.045Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41880) instance=web-03
+2026-01-14T10:48:19.373Z  INFO  [Approvals] POST /api/invoices/INV-41239/approve instance=web-03 user=l.novotny elapsed_ms=4158 status=200
+2026-01-14T10:48:22.026Z  INFO  [Approvals] POST /api/invoices/INV-41695/approve instance=web-02 user=k.matsuda elapsed_ms=4994 status=200
+2026-01-14T10:48:24.590Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41798) instance=web-02
+2026-01-14T10:48:34.549Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41539) instance=web-02
+2026-01-14T10:48:39.518Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41831) instance=web-02
+2026-01-14T10:48:41.530Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41537) instance=web-01
+2026-01-14T10:49:10.889Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41689) instance=web-03
+2026-01-14T10:49:21.008Z  WARN  [Approvals] POST /api/invoices/INV-41917/approve instance=web-03 user=p.iyer elapsed_ms=21450 status=500
+2026-01-14T10:49:24.786Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41697) instance=web-01
+2026-01-14T10:49:26.235Z  INFO  [Approvals] POST /api/invoices/INV-41636/approve instance=web-03 user=s.brennan elapsed_ms=1537 status=200
+2026-01-14T10:49:30.429Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41091) instance=web-02
+2026-01-14T10:49:30.525Z  INFO  [Approvals] POST /api/invoices/INV-41371/approve instance=web-01 user=d.whitfield elapsed_ms=3012 status=200
+2026-01-14T10:49:44.666Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41575) instance=web-03
+2026-01-14T10:49:50.472Z  INFO  [Approvals] POST /api/invoices/INV-41002/approve instance=web-01 user=l.novotny elapsed_ms=2421 status=200
+2026-01-14T10:50:15.399Z  INFO  [Approvals] POST /api/invoices/INV-41912/approve instance=web-02 user=k.matsuda elapsed_ms=1608 status=200
+2026-01-14T10:50:29.256Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41857) instance=web-02
+2026-01-14T10:50:30.633Z  INFO  [Approvals] POST /api/invoices/INV-41752/approve instance=web-01 user=l.novotny elapsed_ms=4768 status=200
+2026-01-14T10:50:34.083Z  INFO  [Approvals] POST /api/invoices/INV-41338/approve instance=web-03 user=a.oyelaran elapsed_ms=2859 status=200
+2026-01-14T10:50:35.102Z  INFO  [Approvals] POST /api/invoices/INV-41068/approve instance=web-03 user=k.matsuda elapsed_ms=6470 status=200
+2026-01-14T10:50:37.364Z  INFO  [Approvals] POST /api/invoices/INV-41326/approve instance=web-03 user=s.brennan elapsed_ms=6654 status=200
+2026-01-14T10:50:39.586Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41517) instance=web-01
+2026-01-14T10:51:04.828Z  INFO  [Approvals] POST /api/invoices/INV-41046/approve instance=web-03 user=l.novotny elapsed_ms=2895 status=200
+2026-01-14T10:51:05.198Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41933) instance=web-02
+2026-01-14T10:51:07.070Z  INFO  [Approvals] POST /api/invoices/INV-41133/approve instance=web-03 user=a.oyelaran elapsed_ms=1075 status=200
+2026-01-14T10:51:08.831Z  INFO  [Approvals] POST /api/invoices/INV-41342/approve instance=web-03 user=t.adeyemi elapsed_ms=1473 status=200
+2026-01-14T10:51:09.920Z  INFO  [Approvals] POST /api/invoices/INV-41279/approve instance=web-03 user=d.whitfield elapsed_ms=7430 status=200
+2026-01-14T10:51:54.593Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41054) instance=web-03
+2026-01-14T10:51:56.798Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41362) instance=web-01
+2026-01-14T10:52:14.055Z  INFO  [Approvals] POST /api/invoices/INV-41375/approve instance=web-01 user=t.adeyemi elapsed_ms=8588 status=200
+2026-01-14T10:52:14.491Z  INFO  [Approvals] POST /api/invoices/INV-41877/approve instance=web-02 user=p.iyer elapsed_ms=7482 status=200
+2026-01-14T10:52:53.972Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41407) instance=web-03
+2026-01-14T10:52:54.381Z  INFO  [Approvals] POST /api/invoices/INV-41573/approve instance=web-02 user=s.brennan elapsed_ms=4573 status=200
+2026-01-14T10:52:56.851Z  INFO  [Approvals] POST /api/invoices/INV-41497/approve instance=web-01 user=k.matsuda elapsed_ms=3093 status=200
+2026-01-14T10:52:58.511Z  INFO  [Approvals] POST /api/invoices/INV-41746/approve instance=web-01 user=a.oyelaran elapsed_ms=1703 status=200
+2026-01-14T10:53:03.361Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41911) instance=web-02
+2026-01-14T10:53:10.235Z  INFO  [Approvals] POST /api/invoices/INV-41511/approve instance=web-03 user=d.whitfield elapsed_ms=6616 status=200
+2026-01-14T10:53:30.816Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41396) instance=web-02
+2026-01-14T10:53:33.196Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41039) instance=web-02
+2026-01-14T10:53:45.310Z  INFO  [Approvals] POST /api/invoices/INV-41392/approve instance=web-03 user=k.matsuda elapsed_ms=6529 status=200
+2026-01-14T10:53:52.277Z  INFO  [Approvals] POST /api/invoices/INV-41620/approve instance=web-01 user=d.whitfield elapsed_ms=602 status=200
+2026-01-14T10:54:06.427Z  INFO  [Approvals] POST /api/invoices/INV-41077/approve instance=web-01 user=t.adeyemi elapsed_ms=6395 status=200
+2026-01-14T10:54:08.654Z  WARN  [Approvals] POST /api/invoices/INV-41178/approve instance=web-01 user=p.iyer elapsed_ms=26919 status=500
+2026-01-14T10:54:27.571Z  INFO  [Approvals] POST /api/invoices/INV-41019/approve instance=web-01 user=p.iyer elapsed_ms=1095 status=200
+2026-01-14T10:54:34.578Z  INFO  [Approvals] POST /api/invoices/INV-41870/approve instance=web-02 user=t.adeyemi elapsed_ms=3101 status=200
+2026-01-14T10:54:52.730Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41553) instance=web-02
+2026-01-14T10:54:53.548Z  INFO  [Approvals] POST /api/invoices/INV-41376/approve instance=web-02 user=l.novotny elapsed_ms=1809 status=200
+2026-01-14T10:54:57.839Z  INFO  [Approvals] POST /api/invoices/INV-41176/approve instance=web-02 user=l.novotny elapsed_ms=6150 status=200
+2026-01-14T10:55:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T10:55:15.743Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41063) instance=web-03
+2026-01-14T10:55:18.319Z  WARN  [Approvals] POST /api/invoices/INV-41881/approve instance=web-02 user=t.adeyemi elapsed_ms=25651 status=500
+2026-01-14T10:55:32.917Z  INFO  [Approvals] POST /api/invoices/INV-41815/approve instance=web-02 user=m.rao elapsed_ms=798 status=200
+2026-01-14T10:55:38.916Z  INFO  [Approvals] POST /api/invoices/INV-41021/approve instance=web-01 user=s.brennan elapsed_ms=3880 status=200
+2026-01-14T10:55:46.809Z  INFO  [Approvals] POST /api/invoices/INV-41179/approve instance=web-02 user=m.rao elapsed_ms=943 status=200
+2026-01-14T10:55:58.178Z  INFO  [Approvals] POST /api/invoices/INV-41201/approve instance=web-02 user=l.novotny elapsed_ms=5253 status=200
+2026-01-14T10:56:05.591Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41872) instance=web-03
+2026-01-14T10:56:11.265Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41859) instance=web-01
+2026-01-14T10:56:16.701Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41169) instance=web-02
+2026-01-14T10:56:44.854Z  INFO  [Approvals] POST /api/invoices/INV-41038/approve instance=web-03 user=d.whitfield elapsed_ms=2357 status=200
+2026-01-14T10:56:45.256Z  INFO  [Approvals] POST /api/invoices/INV-41100/approve instance=web-02 user=s.brennan elapsed_ms=4500 status=200
+2026-01-14T10:56:57.421Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41451) instance=web-02
+2026-01-14T10:57:07.398Z  INFO  [Approvals] POST /api/invoices/INV-41931/approve instance=web-01 user=p.iyer elapsed_ms=3593 status=200
+2026-01-14T10:57:21.685Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41725) instance=web-02
+2026-01-14T10:57:22.601Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41040) instance=web-02
+2026-01-14T10:57:31.642Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41839) instance=web-03
+2026-01-14T10:57:33.760Z  INFO  [Approvals] POST /api/invoices/INV-41466/approve instance=web-03 user=t.adeyemi elapsed_ms=1804 status=200
+2026-01-14T10:57:44.599Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41540) instance=web-01
+2026-01-14T10:57:52.661Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41221) instance=web-02
+2026-01-14T10:57:52.810Z  INFO  [Approvals] POST /api/invoices/INV-41846/approve instance=web-03 user=d.whitfield elapsed_ms=3635 status=200
+2026-01-14T10:58:01.127Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41031) instance=web-01
+2026-01-14T10:58:02.966Z  INFO  [Approvals] POST /api/invoices/INV-41645/approve instance=web-01 user=k.matsuda elapsed_ms=6328 status=200
+2026-01-14T10:58:13.962Z  INFO  [Approvals] POST /api/invoices/INV-41900/approve instance=web-02 user=d.whitfield elapsed_ms=3574 status=200
+2026-01-14T10:58:20.457Z  INFO  [Approvals] POST /api/invoices/INV-41783/approve instance=web-02 user=k.matsuda elapsed_ms=7117 status=200
+2026-01-14T10:58:25.891Z  INFO  [Approvals] POST /api/invoices/INV-41776/approve instance=web-02 user=s.brennan elapsed_ms=2428 status=200
+2026-01-14T10:58:50.103Z  INFO  [Approvals] POST /api/invoices/INV-41557/approve instance=web-01 user=a.oyelaran elapsed_ms=6320 status=200
+2026-01-14T10:59:08.999Z  INFO  [Approvals] POST /api/invoices/INV-41173/approve instance=web-03 user=p.iyer elapsed_ms=7232 status=200
+2026-01-14T10:59:23.781Z  INFO  [Approvals] POST /api/invoices/INV-41760/approve instance=web-02 user=d.whitfield elapsed_ms=5506 status=200
+2026-01-14T10:59:37.103Z  INFO  [Approvals] POST /api/invoices/INV-41533/approve instance=web-02 user=l.novotny elapsed_ms=7941 status=200
+2026-01-14T10:59:42.025Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41695) instance=web-03
+2026-01-14T10:59:45.401Z  INFO  [Approvals] POST /api/invoices/INV-41866/approve instance=web-02 user=p.iyer elapsed_ms=1014 status=200
+2026-01-14T10:59:46.448Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41294) instance=web-01
+2026-01-14T10:59:49.458Z  INFO  [Approvals] POST /api/invoices/INV-41018/approve instance=web-02 user=l.novotny elapsed_ms=5365 status=200
+2026-01-14T11:00:07.000Z  WARN  [Config] Configuration key 'Notifications:LegacyEndpoint' is deprecated and will be removed in 3.0
+2026-01-14T11:00:10.997Z  INFO  [Approvals] POST /api/invoices/INV-41582/approve instance=web-01 user=m.rao elapsed_ms=5700 status=200
+2026-01-14T11:00:24.172Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41630) instance=web-02
+2026-01-14T11:00:41.752Z  INFO  [Approvals] POST /api/invoices/INV-41242/approve instance=web-03 user=l.novotny elapsed_ms=5586 status=200
+2026-01-14T11:00:47.085Z  INFO  [Approvals] POST /api/invoices/INV-41893/approve instance=web-02 user=t.adeyemi elapsed_ms=1805 status=200
+2026-01-14T11:00:51.268Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41005) instance=web-01
+2026-01-14T11:01:04.386Z  INFO  [Approvals] POST /api/invoices/INV-41594/approve instance=web-02 user=k.matsuda elapsed_ms=3346 status=200
+2026-01-14T11:01:41.689Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41930) instance=web-01
+2026-01-14T11:01:46.069Z  INFO  [Approvals] POST /api/invoices/INV-41094/approve instance=web-02 user=t.adeyemi elapsed_ms=1391 status=200
+2026-01-14T11:01:51.444Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41252) instance=web-03
+2026-01-14T11:02:07.598Z  INFO  [Approvals] POST /api/invoices/INV-41930/approve instance=web-02 user=k.matsuda elapsed_ms=1775 status=200
+2026-01-14T11:02:12.026Z  WARN  [Approvals] POST /api/invoices/INV-41345/approve instance=web-02 user=m.rao elapsed_ms=11181 status=500
+2026-01-14T11:02:15.031Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41075) instance=web-03
+2026-01-14T11:02:27.583Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41301) instance=web-03
+2026-01-14T11:02:28.598Z  INFO  [Approvals] POST /api/invoices/INV-41340/approve instance=web-01 user=k.matsuda elapsed_ms=3898 status=200
+2026-01-14T11:02:43.178Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41176) instance=web-02
+2026-01-14T11:02:48.062Z  INFO  [Approvals] POST /api/invoices/INV-41545/approve instance=web-01 user=s.brennan elapsed_ms=3294 status=200
+2026-01-14T11:03:06.030Z  INFO  [Approvals] POST /api/invoices/INV-41065/approve instance=web-02 user=k.matsuda elapsed_ms=595 status=200
+2026-01-14T11:03:06.454Z  INFO  [Approvals] POST /api/invoices/INV-41251/approve instance=web-01 user=d.whitfield elapsed_ms=5916 status=200
+2026-01-14T11:03:14.678Z  INFO  [Approvals] POST /api/invoices/INV-41913/approve instance=web-02 user=l.novotny elapsed_ms=3522 status=200
+2026-01-14T11:03:22.786Z  INFO  [Approvals] POST /api/invoices/INV-41002/approve instance=web-03 user=s.brennan elapsed_ms=5415 status=200
+2026-01-14T11:03:37.203Z  WARN  [Approvals] POST /api/invoices/INV-41917/approve instance=web-03 user=a.oyelaran elapsed_ms=25303 status=500
+2026-01-14T11:03:46.866Z  INFO  [Approvals] POST /api/invoices/INV-41771/approve instance=web-01 user=s.brennan elapsed_ms=4070 status=200
+2026-01-14T11:04:13.193Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41994) instance=web-03
+2026-01-14T11:04:16.758Z  INFO  [Approvals] POST /api/invoices/INV-41624/approve instance=web-01 user=d.whitfield elapsed_ms=8316 status=200
+2026-01-14T11:04:35.528Z  INFO  [Approvals] POST /api/invoices/INV-41652/approve instance=web-02 user=k.matsuda elapsed_ms=4452 status=200
+2026-01-14T11:04:35.641Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41131) instance=web-03
+2026-01-14T11:04:52.458Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41892) instance=web-03
+2026-01-14T11:04:53.287Z  INFO  [Approvals] POST /api/invoices/INV-41252/approve instance=web-02 user=p.iyer elapsed_ms=2497 status=200
+2026-01-14T11:05:43.487Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41621) instance=web-03
+2026-01-14T11:05:49.018Z  INFO  [Approvals] POST /api/invoices/INV-41926/approve instance=web-01 user=d.whitfield elapsed_ms=4701 status=200
+2026-01-14T11:05:50.842Z  INFO  [Approvals] POST /api/invoices/INV-41432/approve instance=web-01 user=a.oyelaran elapsed_ms=4949 status=200
+2026-01-14T11:05:54.763Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41848) instance=web-03
+2026-01-14T11:06:13.864Z  INFO  [Approvals] POST /api/invoices/INV-41699/approve instance=web-02 user=t.adeyemi elapsed_ms=702 status=200
+2026-01-14T11:06:27.473Z  INFO  [Approvals] POST /api/invoices/INV-41633/approve instance=web-02 user=d.whitfield elapsed_ms=7833 status=200
+2026-01-14T11:06:41.939Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41794) instance=web-03
+2026-01-14T11:06:47.147Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41123) instance=web-01
+2026-01-14T11:06:55.204Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41197) instance=web-02
+2026-01-14T11:06:55.478Z  INFO  [Approvals] POST /api/invoices/INV-41684/approve instance=web-01 user=t.adeyemi elapsed_ms=8383 status=200
+2026-01-14T11:07:09.620Z  INFO  [Approvals] POST /api/invoices/INV-41731/approve instance=web-02 user=l.novotny elapsed_ms=2719 status=200
+2026-01-14T11:07:16.016Z  INFO  [Approvals] POST /api/invoices/INV-41142/approve instance=web-03 user=m.rao elapsed_ms=7337 status=200
+2026-01-14T11:07:23.010Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41813) instance=web-03
+2026-01-14T11:07:25.017Z  INFO  [Approvals] POST /api/invoices/INV-41685/approve instance=web-02 user=l.novotny elapsed_ms=8461 status=200
+2026-01-14T11:07:38.043Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41539) instance=web-03
+2026-01-14T11:07:47.248Z  WARN  [Approvals] POST /api/invoices/INV-41372/approve instance=web-01 user=d.whitfield elapsed_ms=20210 status=500
+2026-01-14T11:07:57.046Z  INFO  [Approvals] POST /api/invoices/INV-41838/approve instance=web-02 user=l.novotny elapsed_ms=1320 status=200
+2026-01-14T11:08:12.015Z  INFO  [Approvals] POST /api/invoices/INV-41754/approve instance=web-02 user=p.iyer elapsed_ms=5790 status=200
+2026-01-14T11:08:17.075Z  INFO  [Approvals] POST /api/invoices/INV-41772/approve instance=web-03 user=k.matsuda elapsed_ms=6271 status=200
+2026-01-14T11:08:40.729Z  INFO  [Approvals] POST /api/invoices/INV-41870/approve instance=web-03 user=s.brennan elapsed_ms=8878 status=200
+2026-01-14T11:08:43.729Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41526) instance=web-01
+2026-01-14T11:08:48.288Z  INFO  [Approvals] POST /api/invoices/INV-41512/approve instance=web-01 user=t.adeyemi elapsed_ms=5715 status=200
+2026-01-14T11:09:04.279Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41457) instance=web-03
+2026-01-14T11:09:08.039Z  INFO  [Approvals] POST /api/invoices/INV-41577/approve instance=web-03 user=m.rao elapsed_ms=5098 status=200
+2026-01-14T11:09:09.966Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41725) instance=web-01
+2026-01-14T11:09:27.530Z  INFO  [Approvals] POST /api/invoices/INV-41323/approve instance=web-01 user=l.novotny elapsed_ms=3195 status=200
+2026-01-14T11:09:35.040Z  INFO  [Approvals] POST /api/invoices/INV-41417/approve instance=web-01 user=d.whitfield elapsed_ms=6437 status=200
+2026-01-14T11:09:38.263Z  INFO  [Approvals] POST /api/invoices/INV-41438/approve instance=web-01 user=l.novotny elapsed_ms=727 status=200
+2026-01-14T11:09:40.381Z  ERROR [Notifications] System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing  at PayExClient.SubmitAsync(invoice=INV-41663) instance=web-01
+2026-01-14T11:09:41.591Z  WARN  [Approvals] POST /api/invoices/INV-41755/approve instance=web-02 user=s.brennan elapsed_ms=21513 status=500
+2026-01-14T11:09:41.758Z  ERROR [Notifications] System.Net.Sockets.SocketException (10048): Only one usage of each socket address is normally permitted  at PayExClient.SubmitAsync(invoice=INV-41352) instance=web-01

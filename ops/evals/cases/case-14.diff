@@ -1,0 +1,29 @@
+diff --git a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+--- a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
++++ b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+@@ -23,6 +23,24 @@ public class ApprovalsController : ApiControllerBase
+     public ActionResult<Invoice> Approve(string invoiceId) =>
+         Handle(() => _approvals.Approve(invoiceId, HttpContext.GetSession().Username));
+
++    [HttpPost("{invoiceId}/dispatch-payment")]
++    [RequireRole("Approver", "Admin")]
++    public async Task<IActionResult> DispatchPayment(string invoiceId)
++    {
++        try
++        {
++            // Defect: Fails to pass HttpContext.RequestAborted cancellation token,
++            // and only catches HttpRequestException, missing TaskCanceledException/TimeoutException
++            // when PayEx takes >30 seconds. Causes unhandled 500 crashes and orphaned sockets.
++            var response = await _payExClient.SendDisbursementAsync(invoiceId);
++            return Ok(response);
++        }
++        catch (HttpRequestException ex)
++        {
++            return StatusCode(502, new { error = "Upstream gateway error", details = ex.Message });
++        }
++    }
++
+     [HttpPost("{invoiceId}/reject")]
+     public ActionResult<Invoice> Reject(string invoiceId, [FromBody] RejectRequest request) =>
+         Handle(() => _approvals.Reject(invoiceId, HttpContext.GetSession().Username, request.Reason));
+

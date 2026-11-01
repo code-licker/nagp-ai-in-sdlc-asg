@@ -1,0 +1,23 @@
+diff --git a/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs b/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs
+--- a/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs
++++ b/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs
+@@ -22,6 +22,18 @@ public class InvoicesController : ApiControllerBase
+         return Ok(_repository.GetAll());
+     }
+
++    [HttpGet("search")]
++    public IActionResult Search([FromQuery] string customer, [FromQuery] string? status)
++    {
++        var sql = $"SELECT * FROM Invoices WHERE CustomerName LIKE '%{customer}%'";
++
++        if (!string.IsNullOrEmpty(status))
++        {
++            sql += $" AND Status = '{status}'";
++        }
++
++        return Ok(_queries.Run(sql));
++    }
++
+     [HttpGet("{id}")]
+     public IActionResult GetById(string id)
+     {

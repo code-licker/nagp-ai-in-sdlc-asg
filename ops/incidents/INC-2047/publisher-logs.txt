@@ -1,0 +1,32 @@
+# Application log export
+# Service: invoice-approval  Component: EventPublisher  Environment: production
+# Window: 2026-01-27 08:00:00Z to 2026-01-29 14:30:00Z (filtered to publisher events)
+# Exported by: platform-tools v4.2  Export time: 2026-01-29T14:31:52Z
+
+2026-01-27T09:14:02.118Z  INFO  [EventPublisher] Published eventType=InvoiceApproved invoiceId=INV-44120 messageId=5f1c7a30-9b21-4e77-9a0e-2c9e1f3b8a41 topic=invoice-events
+2026-01-27T09:21:47.904Z  INFO  [EventPublisher] Published eventType=InvoiceApproved invoiceId=INV-44133 messageId=b8d4e2c1-77af-4e10-8d33-5a1902ee64bd topic=invoice-events
+2026-01-27T11:02:19.556Z  INFO  [EventPublisher] Published eventType=InvoiceApproved invoiceId=INV-44171 messageId=1a7fbc55-30d2-4c89-91ab-77e0d4c21f08 topic=invoice-events
+2026-01-27T14:38:51.230Z  INFO  [EventPublisher] Published eventType=InvoiceApproved invoiceId=INV-44206 messageId=9c22e8b7-41d6-4a35-bb10-6e3f90a7d512 topic=invoice-events
+2026-01-27T16:55:07.773Z  INFO  [EventPublisher] Published eventType=InvoiceApproved invoiceId=INV-44248 messageId=4e90a1d8-2c7b-4f61-85ce-1b8d33c0e7a9 topic=invoice-events
+
+2026-01-28T08:41:33.009Z  INFO  [Deploy] Starting deployment release=2.15.1 commit=e4b7d02 previous=2.15.0 commit=a31c88f
+2026-01-28T08:42:11.482Z  INFO  [Deploy] Swap completed release=2.15.1 instances=3 warmup_ok=true
+
+2026-01-28T09:03:26.641Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44291 messageId=7d3a0e94-5c18-42bb-93f7-0a44d1e8b2c6 topic=invoice-events
+2026-01-28T09:48:12.337Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44310 messageId=2b61f70a-8e4d-4993-a1c2-fd90b3576e14 topic=invoice-events
+2026-01-28T10:27:55.802Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44327 messageId=c05d9b26-73e1-41af-8b40-29e7c1a40dd3 topic=invoice-events
+2026-01-28T13:19:40.174Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44388 messageId=86f2cc13-0ab9-4d52-97e6-3c5108ba9f72 topic=invoice-events
+2026-01-28T15:44:28.915Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44402 messageId=f19e4d7b-6c23-4870-bb95-7a0e2d61c834 topic=invoice-events
+2026-01-28T17:08:03.660Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44441 messageId=3ac81e59-9d44-4f16-82b7-16c9f05da2e0 topic=invoice-events
+
+2026-01-29T08:12:49.228Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44470 messageId=d72b6f01-4e85-4c33-9018-5b2ae9c7f463 topic=invoice-events
+2026-01-29T08:55:31.517Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44489 messageId=0e5c3a88-21d7-4b69-85fa-c4190d2e8b57 topic=invoice-events
+2026-01-29T09:30:14.093Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44503 messageId=58a7e13c-9f02-4d81-b3c6-7e204da91f85 topic=invoice-events
+2026-01-29T10:17:52.846Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44528 messageId=aa3f0c67-5b19-4e24-9d70-82c3e5107ba9 topic=invoice-events
+2026-01-29T11:04:38.370Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44547 messageId=6b19d4e2-8c73-4a05-91bf-0de37c248a16 topic=invoice-events
+2026-01-29T11:49:21.705Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44562 messageId=e83c7a15-4d60-4e98-87a2-91b5fc0d3e74 topic=invoice-events
+2026-01-29T12:33:07.482Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44581 messageId=14d0b9f3-7a28-4c57-b6e1-5f3a82c90ed6 topic=invoice-events
+2026-01-29T13:21:55.139Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44604 messageId=97e2f508-3b41-4daa-8c09-d61b74e035c2 topic=invoice-events
+2026-01-29T14:02:44.918Z  INFO  [EventPublisher] Published eventType=invoice.approved invoiceId=INV-44627 messageId=5c48a3d7-1e96-4b02-93d5-28f0ac617b9e topic=invoice-events
+
+# No ERROR or WARN entries from EventPublisher in this window.

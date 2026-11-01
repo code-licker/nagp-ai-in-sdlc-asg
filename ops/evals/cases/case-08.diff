@@ -1,0 +1,26 @@
+diff --git a/backend/src/InvoiceApp.Api/InMemoryInvoiceRepository.cs b/backend/src/InvoiceApp.Api/InMemoryInvoiceRepository.cs
+--- a/backend/src/InvoiceApp.Api/InMemoryInvoiceRepository.cs
++++ b/backend/src/InvoiceApp.Api/InMemoryInvoiceRepository.cs
+@@ -6,7 +6,7 @@ namespace InvoiceApp.Api;
+
+ public class InMemoryInvoiceRepository : IInvoiceRepository
+ {
+-    private readonly ConcurrentDictionary<string, Invoice> _invoices = new();
++    private readonly Dictionary<string, Invoice> _invoices = new();
+
+     public Invoice? GetById(string id) =>
+         _invoices.TryGetValue(id, out var invoice) ? invoice : null;
+@@ -16,12 +16,15 @@ public class InMemoryInvoiceRepository : IInvoiceRepository
+
+     public void Add(Invoice invoice)
+     {
+-        if (!_invoices.TryAdd(invoice.Id, invoice))
++        if (_invoices.ContainsKey(invoice.Id))
+         {
+             throw new InvalidOperationException($"Invoice {invoice.Id} already exists.");
+         }
++
++        _invoices[invoice.Id] = invoice;
+     }
+
+     public void Update(Invoice invoice) => _invoices[invoice.Id] = invoice;

@@ -1,0 +1,379 @@
+run_number,started_at,branch,event,conclusion,step,duration_seconds
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Check out,17
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Set up .NET,24
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Set up Node,9
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Restore .NET packages,140
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Install end-to-end dependencies,67
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Install Playwright browsers,120
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Build,106
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Unit tests,113
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Integration tests,164
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Secret scan,52
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Dependency vulnerability scan,67
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Static analysis,546
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Licence check,44
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Publish application,45
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Build container image,215
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Container image scan,89
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Start application for end-to-end tests,29
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,End-to-end tests,247
+1,2026-01-19T09:12:00Z,feature/supplier-contacts,pull_request,success,Upload test results,14
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Check out,17
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Set up .NET,21
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Set up Node,5
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Restore .NET packages,93
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Install end-to-end dependencies,63
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Install Playwright browsers,118
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Build,135
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Unit tests,85
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Integration tests,110
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Secret scan,32
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Dependency vulnerability scan,69
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Static analysis,477
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Licence check,51
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Publish application,48
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Build container image,128
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Container image scan,91
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Start application for end-to-end tests,37
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,End-to-end tests,167
+2,2026-01-20T14:55:00Z,fix/notification-filter,pull_request,success,Upload test results,18
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Check out,15
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Set up .NET,23
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Set up Node,7
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Restore .NET packages,78
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Install end-to-end dependencies,60
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Install Playwright browsers,144
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Build,143
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Unit tests,96
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Integration tests,109
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Secret scan,33
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Dependency vulnerability scan,45
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Static analysis,600
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Licence check,49
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Publish application,40
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Build container image,177
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Container image scan,103
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Start application for end-to-end tests,28
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,End-to-end tests,236
+3,2026-01-21T20:35:00Z,fix/notification-filter,pull_request,success,Upload test results,14
+4,2026-01-22T07:34:00Z,main,push,success,Check out,9
+4,2026-01-22T07:34:00Z,main,push,success,Set up .NET,26
+4,2026-01-22T07:34:00Z,main,push,success,Set up Node,6
+4,2026-01-22T07:34:00Z,main,push,success,Restore .NET packages,104
+4,2026-01-22T07:34:00Z,main,push,success,Install end-to-end dependencies,49
+4,2026-01-22T07:34:00Z,main,push,success,Install Playwright browsers,119
+4,2026-01-22T07:34:00Z,main,push,success,Build,95
+4,2026-01-22T07:34:00Z,main,push,success,Unit tests,90
+4,2026-01-22T07:34:00Z,main,push,success,Integration tests,140
+4,2026-01-22T07:34:00Z,main,push,success,Secret scan,32
+4,2026-01-22T07:34:00Z,main,push,success,Dependency vulnerability scan,33
+4,2026-01-22T07:34:00Z,main,push,success,Static analysis,350
+4,2026-01-22T07:34:00Z,main,push,success,Licence check,46
+4,2026-01-22T07:34:00Z,main,push,success,Publish application,56
+4,2026-01-22T07:34:00Z,main,push,success,Build container image,191
+4,2026-01-22T07:34:00Z,main,push,success,Container image scan,94
+4,2026-01-22T07:34:00Z,main,push,success,Start application for end-to-end tests,34
+4,2026-01-22T07:34:00Z,main,push,success,End-to-end tests,213
+4,2026-01-22T07:34:00Z,main,push,success,Upload test results,15
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Check out,7
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Set up .NET,13
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Set up Node,4
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Restore .NET packages,107
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Install end-to-end dependencies,93
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Install Playwright browsers,95
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Build,87
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Unit tests,94
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Integration tests,99
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Secret scan,29
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Dependency vulnerability scan,57
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Static analysis,480
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Licence check,28
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Publish application,45
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Build container image,160
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Container image scan,96
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Start application for end-to-end tests,22
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,End-to-end tests,198
+5,2026-01-22T22:20:00Z,fix/notification-filter,pull_request,success,Upload test results,18
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Check out,9
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Set up .NET,12
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Set up Node,12
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Restore .NET packages,104
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Install end-to-end dependencies,69
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Install Playwright browsers,149
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Build,148
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Unit tests,106
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Integration tests,128
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Secret scan,37
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Dependency vulnerability scan,60
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Static analysis,565
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Licence check,25
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Publish application,52
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Build container image,116
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Container image scan,122
+6,2026-01-23T19:50:00Z,fix/notification-filter,pull_request,failure,Upload test results,17
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Check out,3
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Set up .NET,13
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Set up Node,9
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Restore .NET packages,136
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Install end-to-end dependencies,84
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Install Playwright browsers,144
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Build,112
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Unit tests,88
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Integration tests,139
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Secret scan,44
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Dependency vulnerability scan,65
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Static analysis,586
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Licence check,48
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Publish application,42
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Build container image,118
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Container image scan,92
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Start application for end-to-end tests,25
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,End-to-end tests,269
+7,2026-01-24T02:00:00Z,fix/notification-filter,pull_request,success,Upload test results,18
+8,2026-01-24T18:17:00Z,main,push,success,Check out,8
+8,2026-01-24T18:17:00Z,main,push,success,Set up .NET,24
+8,2026-01-24T18:17:00Z,main,push,success,Set up Node,10
+8,2026-01-24T18:17:00Z,main,push,success,Restore .NET packages,76
+8,2026-01-24T18:17:00Z,main,push,success,Install end-to-end dependencies,89
+8,2026-01-24T18:17:00Z,main,push,success,Install Playwright browsers,125
+8,2026-01-24T18:17:00Z,main,push,success,Build,111
+8,2026-01-24T18:17:00Z,main,push,success,Unit tests,83
+8,2026-01-24T18:17:00Z,main,push,success,Integration tests,114
+8,2026-01-24T18:17:00Z,main,push,success,Secret scan,33
+8,2026-01-24T18:17:00Z,main,push,success,Dependency vulnerability scan,37
+8,2026-01-24T18:17:00Z,main,push,success,Static analysis,408
+8,2026-01-24T18:17:00Z,main,push,success,Licence check,40
+8,2026-01-24T18:17:00Z,main,push,success,Publish application,45
+8,2026-01-24T18:17:00Z,main,push,success,Build container image,155
+8,2026-01-24T18:17:00Z,main,push,success,Container image scan,117
+8,2026-01-24T18:17:00Z,main,push,success,Start application for end-to-end tests,31
+8,2026-01-24T18:17:00Z,main,push,success,End-to-end tests,228
+8,2026-01-24T18:17:00Z,main,push,success,Upload test results,13
+9,2026-01-25T23:03:00Z,main,push,success,Check out,15
+9,2026-01-25T23:03:00Z,main,push,success,Set up .NET,30
+9,2026-01-25T23:03:00Z,main,push,success,Set up Node,12
+9,2026-01-25T23:03:00Z,main,push,success,Restore .NET packages,86
+9,2026-01-25T23:03:00Z,main,push,success,Install end-to-end dependencies,76
+9,2026-01-25T23:03:00Z,main,push,success,Install Playwright browsers,105
+9,2026-01-25T23:03:00Z,main,push,success,Build,103
+9,2026-01-25T23:03:00Z,main,push,success,Unit tests,93
+9,2026-01-25T23:03:00Z,main,push,success,Integration tests,123
+9,2026-01-25T23:03:00Z,main,push,success,Secret scan,49
+9,2026-01-25T23:03:00Z,main,push,success,Dependency vulnerability scan,29
+9,2026-01-25T23:03:00Z,main,push,success,Static analysis,476
+9,2026-01-25T23:03:00Z,main,push,success,Licence check,50
+9,2026-01-25T23:03:00Z,main,push,success,Publish application,39
+9,2026-01-25T23:03:00Z,main,push,success,Build container image,167
+9,2026-01-25T23:03:00Z,main,push,success,Container image scan,105
+9,2026-01-25T23:03:00Z,main,push,success,Start application for end-to-end tests,22
+9,2026-01-25T23:03:00Z,main,push,success,End-to-end tests,183
+9,2026-01-25T23:03:00Z,main,push,success,Upload test results,19
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Check out,14
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Set up .NET,25
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Set up Node,12
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Restore .NET packages,105
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Install end-to-end dependencies,74
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Install Playwright browsers,126
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Build,96
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Unit tests,98
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Integration tests,145
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Secret scan,45
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Dependency vulnerability scan,50
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Static analysis,481
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Licence check,48
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Publish application,44
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Build container image,164
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Container image scan,95
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Start application for end-to-end tests,29
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,End-to-end tests,156
+10,2026-01-26T09:18:00Z,chore/dependency-bumps,pull_request,success,Upload test results,12
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Check out,7
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Set up .NET,23
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Set up Node,7
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Restore .NET packages,69
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Install end-to-end dependencies,67
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Install Playwright browsers,121
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Build,102
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Unit tests,69
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Integration tests,147
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Secret scan,37
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Dependency vulnerability scan,66
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Static analysis,473
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Licence check,47
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Publish application,46
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Build container image,197
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Container image scan,107
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Start application for end-to-end tests,30
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,End-to-end tests,266
+11,2026-01-27T05:21:00Z,chore/dependency-bumps,pull_request,success,Upload test results,14
+12,2026-01-28T09:05:00Z,main,push,success,Check out,10
+12,2026-01-28T09:05:00Z,main,push,success,Set up .NET,23
+12,2026-01-28T09:05:00Z,main,push,success,Set up Node,6
+12,2026-01-28T09:05:00Z,main,push,success,Restore .NET packages,103
+12,2026-01-28T09:05:00Z,main,push,success,Install end-to-end dependencies,88
+12,2026-01-28T09:05:00Z,main,push,success,Install Playwright browsers,115
+12,2026-01-28T09:05:00Z,main,push,success,Build,101
+12,2026-01-28T09:05:00Z,main,push,success,Unit tests,92
+12,2026-01-28T09:05:00Z,main,push,success,Integration tests,164
+12,2026-01-28T09:05:00Z,main,push,success,Secret scan,30
+12,2026-01-28T09:05:00Z,main,push,success,Dependency vulnerability scan,42
+12,2026-01-28T09:05:00Z,main,push,success,Static analysis,456
+12,2026-01-28T09:05:00Z,main,push,success,Licence check,33
+12,2026-01-28T09:05:00Z,main,push,success,Publish application,49
+12,2026-01-28T09:05:00Z,main,push,success,Build container image,247
+12,2026-01-28T09:05:00Z,main,push,success,Container image scan,103
+12,2026-01-28T09:05:00Z,main,push,success,Start application for end-to-end tests,38
+12,2026-01-28T09:05:00Z,main,push,success,End-to-end tests,220
+12,2026-01-28T09:05:00Z,main,push,success,Upload test results,10
+13,2026-01-28T17:30:00Z,main,push,success,Check out,22
+13,2026-01-28T17:30:00Z,main,push,success,Set up .NET,27
+13,2026-01-28T17:30:00Z,main,push,success,Set up Node,8
+13,2026-01-28T17:30:00Z,main,push,success,Restore .NET packages,142
+13,2026-01-28T17:30:00Z,main,push,success,Install end-to-end dependencies,45
+13,2026-01-28T17:30:00Z,main,push,success,Install Playwright browsers,137
+13,2026-01-28T17:30:00Z,main,push,success,Build,126
+13,2026-01-28T17:30:00Z,main,push,success,Unit tests,76
+13,2026-01-28T17:30:00Z,main,push,success,Integration tests,125
+13,2026-01-28T17:30:00Z,main,push,success,Secret scan,44
+13,2026-01-28T17:30:00Z,main,push,success,Dependency vulnerability scan,65
+13,2026-01-28T17:30:00Z,main,push,success,Static analysis,647
+13,2026-01-28T17:30:00Z,main,push,success,Licence check,45
+13,2026-01-28T17:30:00Z,main,push,success,Publish application,59
+13,2026-01-28T17:30:00Z,main,push,success,Build container image,170
+13,2026-01-28T17:30:00Z,main,push,success,Container image scan,107
+13,2026-01-28T17:30:00Z,main,push,success,Start application for end-to-end tests,29
+13,2026-01-28T17:30:00Z,main,push,success,End-to-end tests,192
+13,2026-01-28T17:30:00Z,main,push,success,Upload test results,16
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Check out,12
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Set up .NET,22
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Set up Node,8
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Restore .NET packages,81
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Install end-to-end dependencies,54
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Install Playwright browsers,113
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Build,143
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Unit tests,74
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Integration tests,178
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Secret scan,45
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Dependency vulnerability scan,39
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Static analysis,457
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Licence check,50
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Publish application,58
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Build container image,157
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Container image scan,75
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Start application for end-to-end tests,28
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,End-to-end tests,183
+14,2026-01-29T23:20:00Z,fix/approval-audit,pull_request,failure,Upload test results,24
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Check out,19
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Set up .NET,30
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Set up Node,9
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Restore .NET packages,112
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Install end-to-end dependencies,48
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Install Playwright browsers,139
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Build,102
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Unit tests,84
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Integration tests,178
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Secret scan,31
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Dependency vulnerability scan,51
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Static analysis,533
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Licence check,48
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Publish application,44
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Build container image,162
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Container image scan,101
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Start application for end-to-end tests,17
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,End-to-end tests,265
+15,2026-01-30T06:37:00Z,feature/payex-retry,pull_request,success,Upload test results,19
+16,2026-01-31T09:02:00Z,main,push,success,Check out,8
+16,2026-01-31T09:02:00Z,main,push,success,Set up .NET,27
+16,2026-01-31T09:02:00Z,main,push,success,Set up Node,10
+16,2026-01-31T09:02:00Z,main,push,success,Restore .NET packages,106
+16,2026-01-31T09:02:00Z,main,push,success,Install end-to-end dependencies,63
+16,2026-01-31T09:02:00Z,main,push,success,Install Playwright browsers,133
+16,2026-01-31T09:02:00Z,main,push,success,Build,98
+16,2026-01-31T09:02:00Z,main,push,success,Unit tests,60
+16,2026-01-31T09:02:00Z,main,push,success,Integration tests,166
+16,2026-01-31T09:02:00Z,main,push,success,Secret scan,43
+16,2026-01-31T09:02:00Z,main,push,success,Dependency vulnerability scan,49
+16,2026-01-31T09:02:00Z,main,push,success,Static analysis,403
+16,2026-01-31T09:02:00Z,main,push,success,Licence check,34
+16,2026-01-31T09:02:00Z,main,push,success,Publish application,59
+16,2026-01-31T09:02:00Z,main,push,success,Build container image,148
+16,2026-01-31T09:02:00Z,main,push,success,Container image scan,81
+16,2026-01-31T09:02:00Z,main,push,success,Start application for end-to-end tests,35
+16,2026-01-31T09:02:00Z,main,push,success,End-to-end tests,328
+16,2026-01-31T09:02:00Z,main,push,success,Upload test results,18
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Check out,8
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Set up .NET,19
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Set up Node,9
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Restore .NET packages,128
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Install end-to-end dependencies,64
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Install Playwright browsers,128
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Build,118
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Unit tests,63
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Integration tests,91
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Secret scan,43
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Dependency vulnerability scan,41
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Static analysis,538
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Licence check,35
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Publish application,49
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Build container image,140
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Container image scan,119
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Start application for end-to-end tests,28
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,End-to-end tests,246
+17,2026-02-01T02:53:00Z,fix/approval-audit,pull_request,success,Upload test results,15
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Check out,19
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Set up .NET,21
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Set up Node,12
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Restore .NET packages,75
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Install end-to-end dependencies,75
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Install Playwright browsers,125
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Build,134
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Unit tests,86
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Integration tests,151
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Secret scan,38
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Dependency vulnerability scan,66
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Static analysis,541
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Licence check,37
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Publish application,53
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Build container image,178
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Container image scan,89
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Start application for end-to-end tests,33
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,End-to-end tests,168
+18,2026-02-01T13:17:00Z,fix/notification-filter,pull_request,success,Upload test results,12
+19,2026-02-01T18:14:00Z,main,push,success,Check out,15
+19,2026-02-01T18:14:00Z,main,push,success,Set up .NET,13
+19,2026-02-01T18:14:00Z,main,push,success,Set up Node,5
+19,2026-02-01T18:14:00Z,main,push,success,Restore .NET packages,87
+19,2026-02-01T18:14:00Z,main,push,success,Install end-to-end dependencies,91
+19,2026-02-01T18:14:00Z,main,push,success,Install Playwright browsers,176
+19,2026-02-01T18:14:00Z,main,push,success,Build,143
+19,2026-02-01T18:14:00Z,main,push,success,Unit tests,84
+19,2026-02-01T18:14:00Z,main,push,success,Integration tests,201
+19,2026-02-01T18:14:00Z,main,push,success,Secret scan,36
+19,2026-02-01T18:14:00Z,main,push,success,Dependency vulnerability scan,61
+19,2026-02-01T18:14:00Z,main,push,success,Static analysis,514
+19,2026-02-01T18:14:00Z,main,push,success,Licence check,37
+19,2026-02-01T18:14:00Z,main,push,success,Publish application,51
+19,2026-02-01T18:14:00Z,main,push,success,Build container image,146
+19,2026-02-01T18:14:00Z,main,push,success,Container image scan,105
+19,2026-02-01T18:14:00Z,main,push,success,Start application for end-to-end tests,33
+19,2026-02-01T18:14:00Z,main,push,success,End-to-end tests,267
+19,2026-02-01T18:14:00Z,main,push,success,Upload test results,6
+20,2026-02-02T15:38:00Z,main,push,success,Check out,21
+20,2026-02-02T15:38:00Z,main,push,success,Set up .NET,25
+20,2026-02-02T15:38:00Z,main,push,success,Set up Node,6
+20,2026-02-02T15:38:00Z,main,push,success,Restore .NET packages,83
+20,2026-02-02T15:38:00Z,main,push,success,Install end-to-end dependencies,45
+20,2026-02-02T15:38:00Z,main,push,success,Install Playwright browsers,121
+20,2026-02-02T15:38:00Z,main,push,success,Build,97
+20,2026-02-02T15:38:00Z,main,push,success,Unit tests,79
+20,2026-02-02T15:38:00Z,main,push,success,Integration tests,146
+20,2026-02-02T15:38:00Z,main,push,success,Secret scan,34
+20,2026-02-02T15:38:00Z,main,push,success,Dependency vulnerability scan,53
+20,2026-02-02T15:38:00Z,main,push,success,Static analysis,410
+20,2026-02-02T15:38:00Z,main,push,success,Licence check,25
+20,2026-02-02T15:38:00Z,main,push,success,Publish application,49
+20,2026-02-02T15:38:00Z,main,push,success,Build container image,223
+20,2026-02-02T15:38:00Z,main,push,success,Container image scan,86
+20,2026-02-02T15:38:00Z,main,push,success,Start application for end-to-end tests,21
+20,2026-02-02T15:38:00Z,main,push,success,End-to-end tests,213
+20,2026-02-02T15:38:00Z,main,push,success,Upload test results,17

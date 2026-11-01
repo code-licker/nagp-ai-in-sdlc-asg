@@ -1,0 +1,22 @@
+diff --git a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+--- a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
++++ b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+@@ -22,6 +22,17 @@ public class ApprovalsController : ApiControllerBase
+     [HttpPost("{invoiceId}/approve")]
+     public ActionResult<Invoice> Approve(string invoiceId) =>
+         Handle(() => _approvals.Approve(invoiceId, HttpContext.GetSession().Username));
++
++    [HttpPost("{invoiceId}/verify-gateway")]
++    [RequireRole("Approver", "Admin")]
++    public IActionResult VerifyPaymentGateway(string invoiceId)
++    {
++        // Sync-over-async anti-pattern: synchronously blocking on async network I/O
++        // Causes thread pool starvation and deadlocks under 80 req/min peak load
++        var paymentStatus = _payExClient.GetDisbursementStatusAsync(invoiceId).GetAwaiter().GetResult();
++        
++        return Ok(paymentStatus);
++    }
+
+     [HttpPost("{invoiceId}/reject")]
+     public ActionResult<Invoice> Reject(string invoiceId, [FromBody] RejectRequest request) =>
+

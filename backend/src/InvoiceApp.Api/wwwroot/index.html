@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice Approvals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Invoice Approvals</h1>
+    <div id="session-bar" hidden>
+      <span id="whoami"></span>
+      <button id="sign-out" type="button">Sign out</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="login-view" aria-labelledby="login-title">
+      <h2 id="login-title">Sign in</h2>
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input id="username" name="username" autocomplete="username" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <button type="submit">Sign in</button>
+        <p id="login-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section id="app-view" hidden>
+      <div role="tablist" aria-label="Sections">
+        <button role="tab" id="tab-invoices" aria-selected="true" aria-controls="invoices-panel" type="button">Invoices</button>
+        <button role="tab" id="tab-approvals" aria-selected="false" aria-controls="approvals-panel" type="button">Approvals</button>
+      </div>
+
+      <section id="invoices-panel" role="tabpanel" aria-labelledby="tab-invoices">
+        <h2>Invoices</h2>
+
+        <form id="new-invoice-form">
+          <h3>New invoice</h3>
+          <label for="customer">Customer name</label>
+          <input id="customer" name="customer" required>
+          <label for="amount">Amount</label>
+          <input id="amount" name="amount" type="number" min="0.01" step="0.01" required>
+          <button type="submit">Create invoice</button>
+          <p id="create-error" role="alert" hidden></p>
+        </form>
+
+        <table id="invoices-table">
+          <caption>All invoices</caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section id="approvals-panel" role="tabpanel" aria-labelledby="tab-approvals" hidden>
+        <h2>Pending approvals</h2>
+        <p id="pending-empty" hidden>Nothing is waiting for approval.</p>
+        <ul id="pending-list"></ul>
+        <p id="decision-error" role="alert" hidden></p>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+diff --git a/backend/src/InvoiceApp.Domain/DiscountCalculator.cs b/backend/src/InvoiceApp.Domain/DiscountCalculator.cs
+--- a/backend/src/InvoiceApp.Domain/DiscountCalculator.cs
++++ b/backend/src/InvoiceApp.Domain/DiscountCalculator.cs
+@@ -12,9 +12,9 @@ public static class DiscountCalculator
+     public static decimal Apply(decimal amount, decimal discountPercent)
+     {
+         var discount = amount * (discountPercent / 100m);
+-        var discounted = amount - discount;
+
+-        return Math.Round(discounted, 2, MidpointRounding.AwayFromZero);
++        return Math.Round(amount - Math.Round(discount, 2, MidpointRounding.ToZero),
++            2, MidpointRounding.ToZero);
+     }
+ }

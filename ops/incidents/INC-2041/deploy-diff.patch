@@ -1,0 +1,137 @@
+commit 7c41ab9f2e0c4d8a6b15937aa2c0e4411d8f6a3e
+Author: d.whitfield <d.whitfield@example.com>
+Date:   Tue Jan 13 17:22:08 2026 +0000
+
+    Submit approved invoices to PayEx and tidy up approval logging
+
+    Release 2.14.0. Adds the PayEx submission call to the approval path,
+    renames the decision DTO field for consistency with the API contract,
+    and drops the request log to Information.
+
+ src/InvoiceApp.Api/Clients/PayExClient.cs          | 38 +++++++++++++++++-----
+ src/InvoiceApp.Api/Controllers/ApprovalsController.cs | 11 ++++---
+ src/InvoiceApp.Api/Contracts/DecisionResponse.cs   |  4 +--
+ src/InvoiceApp.Api/Program.cs                      |  6 +---
+ src/InvoiceApp.Api/appsettings.Production.json     |  3 ++-
+ 5 files changed, 38 insertions(+), 24 deletions(-)
+
+diff --git a/src/InvoiceApp.Api/Clients/PayExClient.cs b/src/InvoiceApp.Api/Clients/PayExClient.cs
+index 4a1c9e2..b73f0d8 100644
+--- a/src/InvoiceApp.Api/Clients/PayExClient.cs
++++ b/src/InvoiceApp.Api/Clients/PayExClient.cs
+@@ -1,24 +1,44 @@
+ using System.Net.Http.Json;
++using InvoiceApp.Domain;
+
+ namespace InvoiceApp.Api.Clients;
+
+ public class PayExClient : IPayExClient
+ {
+-    private readonly HttpClient _http;
+     private readonly PayExOptions _options;
+     private readonly ILogger<PayExClient> _logger;
+
+-    public PayExClient(HttpClient http, PayExOptions options, ILogger<PayExClient> logger)
++    public PayExClient(PayExOptions options, ILogger<PayExClient> logger)
+     {
+-        _http = http;
+         _options = options;
+         _logger = logger;
+     }
+
+-    public async Task<PayExReceipt> SubmitAsync(Invoice invoice, CancellationToken ct)
++    public async Task<PayExReceipt> SubmitAsync(Invoice invoice, CancellationToken ct = default)
+     {
+-        var response = await _http.PostAsJsonAsync("/v2/payments", Map(invoice), ct);
++        var http = new HttpClient
++        {
++            BaseAddress = new Uri(_options.BaseUrl)
++        };
++        http.DefaultRequestHeaders.Add("X-Api-Key", _options.ApiKey);
++
++        var response = await http.PostAsJsonAsync("/v2/payments", Map(invoice), ct);
+         response.EnsureSuccessStatusCode();
+-        return await response.Content.ReadFromJsonAsync<PayExReceipt>(cancellationToken: ct)
++
++        var receipt = await response.Content.ReadFromJsonAsync<PayExReceipt>(cancellationToken: ct)
+                ?? throw new InvalidOperationException("PayEx returned an empty receipt.");
++
++        _logger.LogInformation(
++            "Submitted invoice {InvoiceId} to PayEx, reference {Reference}",
++            invoice.Id, receipt.Reference);
++
++        return receipt;
+     }
+
+     private static PayExPayment Map(Invoice invoice) => new(
+         invoice.Id,
+         invoice.Amount,
+         invoice.CustomerName);
+ }
+
+diff --git a/src/InvoiceApp.Api/Controllers/ApprovalsController.cs b/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+index 9d2f7a1..c05e8b4 100644
+--- a/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
++++ b/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+@@ -31,12 +31,13 @@ public class ApprovalsController : ApiControllerBase
+     [HttpPost("{id}/approve")]
+     [RequireRole("Approver")]
+-    public IActionResult Approve(string id)
++    public async Task<IActionResult> Approve(string id)
+     {
+-        _logger.LogDebug("Approve requested for {InvoiceId} by {User}", id, CurrentUser.Name);
++        _logger.LogInformation("Approve requested for {InvoiceId} by {User}", id, CurrentUser.Name);
+
+         var invoice = _approvals.Approve(id, CurrentUser.Name);
++        var receipt = await _payEx.SubmitAsync(invoice);
+
+-        return Ok(DecisionResponse.From(invoice));
++        return Ok(DecisionResponse.From(invoice, receipt));
+     }
+
+     [HttpPost("{id}/reject")]
+
+diff --git a/src/InvoiceApp.Api/Contracts/DecisionResponse.cs b/src/InvoiceApp.Api/Contracts/DecisionResponse.cs
+index 2e81b40..f6a9c33 100644
+--- a/src/InvoiceApp.Api/Contracts/DecisionResponse.cs
++++ b/src/InvoiceApp.Api/Contracts/DecisionResponse.cs
+@@ -3,8 +3,8 @@ namespace InvoiceApp.Api.Contracts;
+ public record DecisionResponse(
+     string InvoiceId,
+     string Status,
+-    string? DecidedBy,
+-    DateTime? DecidedAt);
++    string? ApprovedBy,
++    DateTime? ApprovedAt);
+
+diff --git a/src/InvoiceApp.Api/Program.cs b/src/InvoiceApp.Api/Program.cs
+index 1b7c304..88ae512 100644
+--- a/src/InvoiceApp.Api/Program.cs
++++ b/src/InvoiceApp.Api/Program.cs
+@@ -18,11 +18,7 @@ builder.Services.AddSingleton<IInvoiceRepository, InMemoryInvoiceRepository>();
+ builder.Services.AddSingleton<ApprovalService>();
+
+-builder.Services.AddHttpClient<IPayExClient, PayExClient>(client =>
+-{
+-    client.BaseAddress = new Uri(builder.Configuration["PayEx:BaseUrl"]!);
+-    client.Timeout = TimeSpan.FromSeconds(10);
+-});
++builder.Services.AddSingleton<IPayExClient, PayExClient>();
+
+ var app = builder.Build();
+
+diff --git a/src/InvoiceApp.Api/appsettings.Production.json b/src/InvoiceApp.Api/appsettings.Production.json
+index 77b0ca5..3ad9e61 100644
+--- a/src/InvoiceApp.Api/appsettings.Production.json
++++ b/src/InvoiceApp.Api/appsettings.Production.json
+@@ -1,7 +1,8 @@
+ {
+   "Logging": {
+     "LogLevel": {
+-      "Default": "Debug"
++      "Default": "Information"
+     }
+   },
++  "Notifications": { "LegacyEndpoint": "https://notify.internal.example/v1" },
+   "PayEx": { "BaseUrl": "https://api.payex.example", "Timeout": "00:00:10" }
+ }

@@ -1,0 +1,26 @@
+# Application log export
+# Service: notification-worker  Environment: production
+# Window: 2026-01-27 08:00:00Z to 2026-01-29 14:30:00Z
+# Exported by: platform-tools v4.2  Export time: 2026-01-29T14:32:10Z
+
+2026-01-27T08:00:04.221Z  INFO  [Worker] Started. Subscription=notification-worker Topic=invoice-events MaxConcurrentCalls=8
+2026-01-27T09:14:03.907Z  INFO  [Worker] Received messageId=5f1c7a30-9b21-4e77-9a0e-2c9e1f3b8a41 invoiceId=INV-44120
+2026-01-27T09:14:04.655Z  INFO  [Worker] Notification sent invoiceId=INV-44120 channel=email recipient=ap@harlowfreight.example
+2026-01-27T09:21:49.113Z  INFO  [Worker] Received messageId=b8d4e2c1-77af-4e10-8d33-5a1902ee64bd invoiceId=INV-44133
+2026-01-27T09:21:49.840Z  INFO  [Worker] Notification sent invoiceId=INV-44133 channel=email recipient=accounts@pembertonltd.example
+2026-01-27T11:02:20.774Z  INFO  [Worker] Received messageId=1a7fbc55-30d2-4c89-91ab-77e0d4c21f08 invoiceId=INV-44171
+2026-01-27T11:02:21.402Z  INFO  [Worker] Notification sent invoiceId=INV-44171 channel=email recipient=finance@castellanfoods.example
+2026-01-27T14:38:52.558Z  INFO  [Worker] Received messageId=9c22e8b7-41d6-4a35-bb10-6e3f90a7d512 invoiceId=INV-44206
+2026-01-27T14:38:53.190Z  INFO  [Worker] Notification sent invoiceId=INV-44206 channel=email recipient=ap@nordvik.example
+2026-01-27T16:55:09.046Z  INFO  [Worker] Received messageId=4e90a1d8-2c7b-4f61-85ce-1b8d33c0e7a9 invoiceId=INV-44248
+2026-01-27T16:55:09.688Z  INFO  [Worker] Notification sent invoiceId=INV-44248 channel=email recipient=billing@arrowmill.example
+
+2026-01-27T20:00:00.115Z  INFO  [Worker] Health check ok. Messages processed in last 12h: 5
+2026-01-28T08:00:00.209Z  INFO  [Worker] Health check ok. Messages processed in last 12h: 0
+2026-01-28T20:00:00.187Z  INFO  [Worker] Health check ok. Messages processed in last 12h: 0
+2026-01-29T08:00:00.243Z  INFO  [Worker] Health check ok. Messages processed in last 12h: 0
+
+2026-01-29T14:00:00.198Z  INFO  [Worker] Health check ok. Messages processed in last 12h: 0
+
+# The worker has not restarted since 2026-01-27T08:00:04Z.
+# No ERROR entries in this window.

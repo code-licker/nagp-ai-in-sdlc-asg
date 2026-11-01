@@ -1,0 +1,26 @@
+diff --git a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+--- a/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
++++ b/backend/src/InvoiceApp.Api/Controllers/ApprovalsController.cs
+@@ -38,6 +38,22 @@ public class ApprovalsController : ApiControllerBase
+         return Ok(DecisionResponse.From(invoice));
+     }
+
++    public record BulkApproveRequest(List<string>? Ids);
++
++    [HttpPost("bulk-approve")]
++    [RequireRole("Approver")]
++    public IActionResult BulkApprove([FromBody] BulkApproveRequest request)
++    {
++        var results = new List<Invoice>();
++
++        foreach (var id in request.Ids)
++        {
++            results.Add(_approvals.Approve(id, CurrentUser.Name));
++        }
++
++        return Ok(results.Select(DecisionResponse.From));
++    }
++
+     [HttpPost("{id}/reject")]
+     [RequireRole("Approver")]
+     public IActionResult Reject(string id, [FromBody] RejectRequest request)

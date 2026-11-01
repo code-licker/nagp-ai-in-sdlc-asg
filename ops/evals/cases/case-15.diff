@@ -1,0 +1,31 @@
+diff --git a/backend/src/InvoiceApp.Api/Auth/IdempotencyValidationFilter.cs b/backend/src/InvoiceApp.Api/Auth/IdempotencyValidationFilter.cs
+new file mode 100644
+--- /dev/null
++++ b/backend/src/InvoiceApp.Api/Auth/IdempotencyValidationFilter.cs
+@@ -0,0 +1,25 @@
++namespace InvoiceApp.Api.Auth;
++
++using Microsoft.AspNetCore.Http;
++
++/// <summary>
++/// Endpoint filter ensuring mutation requests include a structurally valid UUID idempotency key.
++/// </summary>
++public class IdempotencyValidationFilter : IEndpointFilter
++{
++    public const string HeaderName = "Idempotency-Key";
++
++    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
++    {
++        var httpContext = context.HttpContext;
++        
++        if (!httpContext.Request.Headers.TryGetValue(HeaderName, out var values) ||
++            string.IsNullOrWhiteSpace(values) ||
++            !Guid.TryParse(values.ToString(), out _))
++        {
++            return Results.BadRequest(new { error = $"Header '{HeaderName}' is required and must be a valid UUID v4." });
++        }
++
++        return await next(context);
++    }
++}
+

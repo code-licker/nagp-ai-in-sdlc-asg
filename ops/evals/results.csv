@@ -1,0 +1,61 @@
+run,case,model,prompt_version,verdict,finding_summary,confidence_reported,notes
+1,case-01,gpt-luna-6,v1,caught,NullReferenceException if BulkApproveRequest.Ids is null in foreach loop,High,Actual defect correctly identified
+1,case-02,gpt-luna-6,v1,caught,SQL Injection vulnerability via direct string interpolation of customer and status,High,Actual defect correctly identified (CWE-89)
+1,case-03,gpt-luna-6,v1,caught,Double rounding truncation error using MidpointRounding.ToZero alters financial calculation,Medium,Defect in financial rounding precision
+1,case-04,gpt-luna-6,v1,false_alarm,Flagged parameter rename as potential breaking change for callers using named arguments,Medium,Clean refactoring falsely flagged as defect
+1,case-05,gpt-luna-6,v1,caught,Missing RequireRole Admin authorization attribute on destructive HttpDelete endpoint,High,Actual authorization defect (CWE-285)
+1,case-06,gpt-luna-6,v1,clean,No defect found. Unit test additions are valid xUnit assertions,High,Correctly identified clean case
+1,case-07,gpt-luna-6,v1,caught,Sensitive user session and token logged in plain text via structured logging,High,Actual security/privacy defect (CWE-532)
+1,case-08,gpt-luna-6,v1,caught,Dictionary is not thread-safe under concurrent access in singleton repository,High,Actual concurrency defect
+1,case-09,gpt-luna-6,v1,clean,No defect found. Readme clarification and appsettings logging configuration are valid,High,Correctly identified clean case
+1,case-10,gpt-luna-6,v1,caught,Swallowing generic exceptions and returning false HTTP 200 OK completed status,High,Actual defect correctly identified
+1,case-11,gpt-luna-6,v1,caught,Generates new Guid on retry bypassing PayEx idempotency deduplication,High,Actual defect in custom case
+1,case-12,gpt-luna-6,v1,clean,No defect found. Domain record specification is immutable and null-safe,High,Correctly identified clean custom case
+1,case-13,gpt-luna-6,v1,caught,Sync-over-async via GetAwaiter().GetResult() synchronously blocks thread pool during network I/O,High,Actual thread pool starvation defect
+1,case-14,gpt-luna-6,v1,caught,Missing RequestAborted cancellation token and unhandled TaskCanceledException/TimeoutException on 30s timeout,High,Actual unhandled timeout defect
+1,case-15,gpt-luna-6,v1,clean,No defect found. Idempotency validation filter properly parses and validates UUID format,High,Correctly identified clean custom case
+2,case-01,gpt-luna-6,v1,caught,NullReferenceException when iterating over nullable request.Ids,High,Actual defect correctly identified
+2,case-02,gpt-luna-6,v1,caught,Unsanitized SQL concatenation vulnerable to SQL injection,High,Actual defect correctly identified
+2,case-03,gpt-luna-6,v1,missed,Reported as valid rounding logic without noting financial truncation discrepancy,Low,Missed subtle double-rounding truncation
+2,case-04,gpt-luna-6,v1,clean,No defect found. Variable renaming from _repository to _invoices is consistent,High,Correctly identified clean case
+2,case-05,gpt-luna-6,v1,caught,Missing RequireRole Admin check allowing unauthorized invoice deletions,High,Actual defect correctly identified
+2,case-06,gpt-luna-6,v1,false_alarm,Flagged hardcoded test username nitin as security flaw instead of test data,Medium,Clean test code falsely flagged as defect
+2,case-07,gpt-luna-6,v1,caught,Plaintext credential and bearer token leakage into application logs,High,Actual defect correctly identified
+2,case-08,gpt-luna-6,v1,caught,Race condition: non-concurrent collection in singleton service causes collection corruption,High,Actual defect correctly identified
+2,case-09,gpt-luna-6,v1,clean,No defect found. Clean documentation and log level tuning,High,Correctly identified clean case
+2,case-10,gpt-luna-6,v1,caught,Global catch Exception block hides critical runtime errors behind 200 OK,High,Actual defect correctly identified
+2,case-11,gpt-luna-6,v1,caught,Blind retry with new UUID causes duplicate disbursements at payment gateway,High,Actual defect correctly identified
+2,case-12,gpt-luna-6,v1,clean,No defect found. Pure domain record with defensive null checks,High,Correctly identified clean case
+2,case-13,gpt-luna-6,v1,caught,Blocking synchronous call on async PayEx client method drains ASP.NET thread pool under load,High,Actual defect correctly identified
+2,case-14,gpt-luna-6,v1,caught,Catching HttpRequestException does not catch TaskCanceledException thrown by HttpClient timeout,High,Actual defect correctly identified
+2,case-15,gpt-luna-6,v1,clean,No defect found. Valid ASP.NET Core IEndpointFilter implementation for header validation,High,Correctly identified clean case
+3,case-01,gpt-luna-6,v1,caught,NullReferenceException on request.Ids traversal without null guard,High,Actual defect correctly identified
+3,case-02,gpt-luna-6,v1,caught,Direct string interpolation allows arbitrary SQL execution via query parameters,High,Actual defect correctly identified
+3,case-03,gpt-luna-6,v1,caught,Truncation bias introduced by Math.Round ToZero on intermediate discount,Medium,Defect in financial rounding precision
+3,case-04,gpt-luna-6,v1,clean,No defect found. Consistent internal field refactoring,High,Correctly identified clean case
+3,case-05,gpt-luna-6,v1,caught,Delete endpoint lacks role requirement attribute present on update endpoint,High,Actual defect correctly identified
+3,case-06,gpt-luna-6,v1,clean,No defect found. Test assertions verify boundaries as intended,High,Correctly identified clean case
+3,case-07,gpt-luna-6,v1,caught,CWE-532: Session tokens serialized directly into log stream,High,Actual defect correctly identified
+3,case-08,gpt-luna-6,v1,caught,Standard Dictionary not thread-safe; concurrent requests will corrupt hashtable,High,Actual defect correctly identified
+3,case-09,gpt-luna-6,v1,clean,No defect found. Valid config and documentation changes,High,Correctly identified clean case
+3,case-10,gpt-luna-6,v1,caught,Silent error suppression: catch-all returns HTTP 200 completed status,High,Actual defect correctly identified
+3,case-11,gpt-luna-6,v1,caught,Fresh disbursement ID generated on retry breaks idempotency and duplicates payments,High,Actual defect correctly identified
+3,case-12,gpt-luna-6,v1,false_alarm,Flagged string comparison in domain record as potential performance bottleneck on large collections,Low,Clean domain record falsely flagged as defect
+3,case-13,gpt-luna-6,v1,caught,Sync-over-async GetAwaiter().GetResult() can cause deadlocks and thread pool exhaustion,High,Actual defect correctly identified
+3,case-14,gpt-luna-6,v1,caught,Fails to handle TaskCanceledException when request times out at 30 seconds, causing unhandled 500 error,High,Actual defect correctly identified
+3,case-15,gpt-luna-6,v1,false_alarm,Flagged filter for not persisting idempotency key to database cache,Low,Clean validation filter falsely flagged for not doing persistence
+4,case-01,gpt-luna-6,v2,caught,Unhandled NullReferenceException on request.Ids (High Severity),High,Actual defect correctly identified under v2 prompt
+4,case-02,gpt-luna-6,v2,caught,CWE-89 SQL Injection via unparameterized string interpolation (Critical Severity),High,Actual defect correctly identified under v2 prompt
+4,case-03,gpt-luna-6,v2,caught,Financial calculation truncation defect via double Round ToZero (High Severity),High,Actual defect correctly identified under v2 prompt
+4,case-04,gpt-luna-6,v2,clean,NO DEFECT FOUND. Pure internal field refactor with zero semantic change,High,Zero false alarm under v2 prompt
+4,case-05,gpt-luna-6,v2,caught,CWE-285 Missing Authorization check on destructive Delete endpoint (Critical Severity),High,Actual defect correctly identified under v2 prompt
+4,case-06,gpt-luna-6,v2,clean,NO DEFECT FOUND. Valid unit test additions with standard test assertions,High,Zero false alarm under v2 prompt
+4,case-07,gpt-luna-6,v2,caught,CWE-532 Plaintext credential and session token exposure in logs (Critical Severity),High,Actual defect correctly identified under v2 prompt
+4,case-08,gpt-luna-6,v2,caught,Thread safety race condition in singleton repository collection (Critical Severity),High,Actual defect correctly identified under v2 prompt
+4,case-09,gpt-luna-6,v2,clean,NO DEFECT FOUND. Valid logging configuration and documentation change,High,Zero false alarm under v2 prompt
+4,case-10,gpt-luna-6,v2,caught,Critical error swallowing returning 200 OK with misleading status (High Severity),High,Actual defect correctly identified under v2 prompt
+4,case-11,gpt-luna-6,v2,caught,Non-idempotent payment retry generates fresh transaction ID causing double disbursement (Critical Severity),High,Actual defect correctly identified under v2 prompt
+4,case-12,gpt-luna-6,v2,clean,NO DEFECT FOUND. Immutable domain specification record with safe predicate logic,High,Zero false alarm under v2 prompt
+4,case-13,gpt-luna-6,v2,caught,Sync-over-async blocking via GetAwaiter().GetResult() causes thread pool starvation under 80 req/min (Critical Severity),High,Actual defect correctly identified under v2 prompt
+4,case-14,gpt-luna-6,v2,caught,Unhandled TaskCanceledException and missing CancellationToken propagation on 30s timeout (Critical Severity),High,Actual defect correctly identified under v2 prompt
+4,case-15,gpt-luna-6,v2,clean,NO DEFECT FOUND. Valid defensive HTTP endpoint filter for idempotency key validation,High,Zero false alarm under v2 prompt

@@ -1,0 +1,40 @@
+diff --git a/backend/tests/InvoiceApp.Tests/ApprovalServiceTests.cs b/backend/tests/InvoiceApp.Tests/ApprovalServiceTests.cs
+--- a/backend/tests/InvoiceApp.Tests/ApprovalServiceTests.cs
++++ b/backend/tests/InvoiceApp.Tests/ApprovalServiceTests.cs
+@@ -58,4 +58,34 @@ public class ApprovalServiceTests
+         Assert.Equal(InvoiceStatus.Rejected, result.Status);
+     }
++
++    [Fact]
++    public void Reject_WithWhitespaceReason_Throws()
++    {
++        var repository = new FakeInvoiceRepository();
++        repository.Add(Pending("INV-900"));
++        var service = new ApprovalService(repository);
++
++        Assert.Throws<ArgumentException>(() => service.Reject("INV-900", "nitin", "   "));
++    }
++
++    [Fact]
++    public void Approve_RecordsTheApproverAndTime()
++    {
++        var repository = new FakeInvoiceRepository();
++        repository.Add(Pending("INV-901"));
++        var service = new ApprovalService(repository);
++
++        var before = DateTime.UtcNow;
++        var result = service.Approve("INV-901", "nitin");
++
++        Assert.Equal("nitin", result.DecidedBy);
++        Assert.NotNull(result.DecidedAt);
++        Assert.InRange(result.DecidedAt!.Value, before, DateTime.UtcNow);
++    }
++
++    [Fact]
++    public void Approve_UnknownInvoice_Throws()
++    {
++        var service = new ApprovalService(new FakeInvoiceRepository());
++
++        Assert.Throws<KeyNotFoundException>(() => service.Approve("INV-nope", "nitin"));
++    }
+ }

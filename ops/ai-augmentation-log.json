@@ -1,0 +1,461 @@
+[
+  {
+    "id": "20261031T083000Z-ask-assignment-scoping",
+    "timestamp": "2026-10-31T08:30:00Z",
+    "stage": "setup",
+    "agent": "agent",
+    "agent_name": "Copilot Staff Architect Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "ask",
+    "related_ids": [],
+    "parent_task": null,
+    "context": "Tier-2 Production Migration Workshop Scoping",
+    "request": "can you read the assignment docs and tell me what all needs to be done for this workshop?",
+    "skills_used": [
+      {
+        "name": "agy-customizations",
+        "type": "built-in",
+        "purpose": "Parse repository layout and assignment instructions",
+        "invocation": "automatic"
+      }
+    ],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "read_file"
+    ],
+    "suggestion": "The AI provided a high-level summary of the 5 core tasks but initially treated this as a typical greenfield cloud migration, proposing direct microservices decomposition with Kubernetes and generic enterprise patterns.",
+    "human_decision": "Constrained project scope strictly to the Tier-2 SLA constraints: monolithic ASP.NET Core 8 API, in-memory repository, zero ORM, exactly 40,000 invoices/month, 80 req/min peak, SOC 2 compliance, and PayEx integration. Mandated documenting exact code facts vs inferences.",
+    "action_verification": "Cross-referenced requirements across the workshop rubric, backend source code, and ops directories.",
+    "limitation": "AI tended to assume typical modern enterprise stacks (EF Core, microservices) rather than inspecting the actual minimal repository code.",
+    "status": "applied",
+    "artifacts": [
+      "docs/architecture/task-1-as-built-and-target-architecture.md"
+    ]
+  },
+  {
+    "id": "20261031T084500Z-plan-asbuilt-architecture-mapping",
+    "timestamp": "2026-10-31T08:45:00Z",
+    "stage": "task-1-architecture",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "plan",
+    "related_ids": [
+      "20261031T083000Z-ask-assignment-scoping"
+    ],
+    "parent_task": null,
+    "context": "Task 1 - As-Built Container and Component Analysis",
+    "request": "how does the current codebase work right now and what is it actually missing for production?",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "read_file",
+      "search_web"
+    ],
+    "suggestion": "AI proposed generating C4 container and sequence diagrams assuming an Entity Framework Core SQL backend and an active PayEx HTTP client integration inside ApprovalService.",
+    "human_decision": "Caught severe hallucinations: code audit revealed zero database (uses InMemoryInvoiceRepository with a C# lock object) and zero PayEx/Service Bus integration. Required authoring a formal Citations vs Hallucinations Matrix explicitly distinguishing verified AST symbols from AI guesses.",
+    "action_verification": "Audited backend/src/InvoiceApp.Api/InMemoryInvoiceRepository.cs, Program.cs, and backend/src/InvoiceApp.Domain/ApprovalService.cs. Built structured comparison table.",
+    "limitation": "Without source file grounded citations, LLMs extrapolate standard web architecture patterns onto minimal stub repositories.",
+    "status": "modified",
+    "artifacts": [
+      "docs/architecture/task-1-as-built-and-target-architecture.md"
+    ]
+  },
+  {
+    "id": "20261031T090000Z-edit-fix-mermaid-parser-syntax",
+    "timestamp": "2026-10-31T09:00:00Z",
+    "stage": "task-1-architecture",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "edit",
+    "related_ids": [
+      "20261031T084500Z-plan-asbuilt-architecture-mapping"
+    ],
+    "parent_task": null,
+    "context": "Task 1 - Mermaid Diagram Parser Remediation",
+    "request": "fix the mermaid syntax error in the diagram, it is failing to render on line 43",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "edit_file",
+      "read_file"
+    ],
+    "suggestion": "AI attempted to use UML class diagram syntax '<|..' mixed inside a standard flowchart TD diagram and left a trailing unclosed pipe on a link annotation.",
+    "human_decision": "Replaced illegal syntax with standard flowchart dotted line notation '-.->' and standardized pipe label syntax to '|label|' with top-to-bottom edge routing to prevent label overlapping.",
+    "action_verification": "Inspected rendered Mermaid graph in markdown preview. Verified zero lexer/parser console errors and verified crisp layout.",
+    "limitation": "LLM generated hybrid Mermaid grammar mixing flowchart and class diagram arrow syntax without verifying against Mermaid.js grammar specification.",
+    "status": "applied",
+    "artifacts": [
+      "docs/architecture/task-1-as-built-and-target-architecture.md"
+    ]
+  },
+  {
+    "id": "20261031T091500Z-agent-arch-test-implementation",
+    "timestamp": "2026-10-31T09:15:00Z",
+    "stage": "task-1-architecture",
+    "agent": "agent",
+    "agent_name": "Copilot Staff Architect Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "agent",
+    "related_ids": [
+      "20261031T084500Z-plan-asbuilt-architecture-mapping"
+    ],
+    "parent_task": null,
+    "context": "Task 1 - Automated Hexagonal Architecture Enforcement",
+    "request": "can you write an automated test in c# that fails if our domain layer references the api or payment gateway?",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "write_file",
+      "read_file"
+    ],
+    "suggestion": "Suggested adding NetArchTest.Rules or ArchUnit.NET via NuGet package to tests project.",
+    "human_decision": "Rejected external 3rd-party dependencies to avoid NuGet restore failures in offline or restricted enterprise environments. Implemented clean zero-dependency .NET Reflection tests asserting Domain assembly has 0 references to Api, 0 types in web namespaces, and 0 PayEx references.",
+    "action_verification": "Authored backend/tests/InvoiceApp.Tests/ArchitectureTests.cs with 3 unit tests inspecting Assembly.GetReferencedAssemblies() and exported Types.",
+    "limitation": "AI default instinct is to reach for third-party libraries for architectural assertions rather than leveraging idiomatic built-in Reflection.",
+    "status": "applied",
+    "artifacts": [
+      "backend/tests/InvoiceApp.Tests/ArchitectureTests.cs"
+    ]
+  },
+  {
+    "id": "20261031T093000Z-ask-adr-concurrency-and-retry",
+    "timestamp": "2026-10-31T09:30:00Z",
+    "stage": "task-2-adr",
+    "agent": "agent",
+    "agent_name": "Copilot Staff Architect Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "ask",
+    "related_ids": [],
+    "parent_task": null,
+    "context": "Task 2 - High Concurrency Payment Resiliency",
+    "request": "which pattern is best for payment retries when PayEx times out for 30s during month end peak?",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "read_file"
+    ],
+    "suggestion": "AI claimed HTTP 504 Gateway Timeout meant payment failed, suggested in-memory Polly retries with exponential backoff generating a new GUID on retry, and dismissed 80 req/min as low load.",
+    "human_decision": "Identified catastrophic flaw: HTTP 504 is an unknown downstream state where PayEx may have debited the vendor. Generating a new GUID breaks idempotency and duplicates wire transfers. Furthermore, by Little's Law (L = lambda * W), 80 req/min with 32s average latency blocks 43 concurrent threads/sockets, causing thread pool starvation. Selected Pattern C: Transactional Outbox + Azure Service Bus.",
+    "action_verification": "Calculated Little's Law concurrency metrics and authored 3:00 AM failure sequence diagram.",
+    "limitation": "LLM assumed HTTP 5xx responses are universally safe to retry and lacked awareness of financial wire double-disbursement risks.",
+    "status": "modified",
+    "artifacts": [
+      "docs/adr/ADR-001-exactly-once-submission.md"
+    ]
+  },
+  {
+    "id": "20261031T095000Z-plan-author-adr001",
+    "timestamp": "2026-10-31T09:50:00Z",
+    "stage": "task-2-adr",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "plan",
+    "related_ids": [
+      "20261031T093000Z-ask-adr-concurrency-and-retry"
+    ],
+    "parent_task": null,
+    "context": "Task 2 - ADR-001 Exactly-Once Submission Architecture Decision",
+    "request": "write the complete ADR-001 document comparing the 3 patterns and show where the AI was wrong",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "write_file"
+    ],
+    "suggestion": "Proposed standard ADR structure comparing synchronous retry, client idempotency, and transactional outbox, plus cost estimates.",
+    "human_decision": "Structured ADR-001 with comprehensive trade-off matrix across 8 dimensions (concurrency, crash recovery, cloud cost, developer complexity, etc.), financial cost breakdown ($182/mo Azure), and an unsparing 'Where the agent was wrong or useless' section detailing the 504 retry fallacy.",
+    "action_verification": "Reviewed full ADR text, validated cost model against Azure East US pricing, and verified failure sequence diagrams.",
+    "limitation": "AI required explicit human prompting to articulate its own analytical blind spots and concurrency failures.",
+    "status": "applied",
+    "artifacts": [
+      "docs/adr/ADR-001-exactly-once-submission.md"
+    ]
+  },
+  {
+    "id": "20261101T081500Z-plan-autonomy-policy-option-c",
+    "timestamp": "2026-11-01T08:15:00Z",
+    "stage": "task-3-autonomy-policy",
+    "agent": "agent",
+    "agent_name": "Copilot Staff Architect Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "plan",
+    "related_ids": [],
+    "parent_task": null,
+    "context": "Task 3 - Incident Response AI Autonomy Governance",
+    "request": "start task 3 with option C",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "write_file",
+      "read_file"
+    ],
+    "suggestion": "The AI suggested starting on Day 1 at Level 2 (Supervised Autonomy) where the agent can run diagnostic CLI scripts, trigger rollbacks, and draft PRs.",
+    "human_decision": "Rejected Level 2 Day-1 rollout. Enforced Day-1 Level 1 (Assistive/Read-Only) posture. Justification: team context includes 2 new engineers unfamiliar with failure domains; premature execution permissions during 2:00 AM high-stress incidents invites dangerous automation bias. Established strict promotion criteria (50 consecutive runs with 0 critical hallucinations and dual Tech Lead + Security signoff).",
+    "action_verification": "Authored docs/policies/ai-autonomy-policy.md detailing Levels 0-3, RBAC least privilege, promotion gates, and defensible Day-1 stance.",
+    "limitation": "AI models tend toward overly optimistic capability assessment, advocating for autonomous execution without considering organizational human factors and junior engineer cognitive load.",
+    "status": "modified",
+    "artifacts": [
+      "docs/policies/ai-autonomy-policy.md"
+    ]
+  },
+  {
+    "id": "20261101T090000Z-agent-eval-harness-execution",
+    "timestamp": "2026-11-01T09:00:00Z",
+    "stage": "task-4-evals",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "agent",
+    "related_ids": [],
+    "parent_task": null,
+    "context": "Task 4 - Code Review Eval Benchmarking",
+    "request": "proceed with task 4",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "read_file",
+      "write_file",
+      "run_command"
+    ],
+    "suggestion": "AI proposed running baseline evaluations on the 10 provided cases. The initial unconstrained prompt generated stylistic nitpicks on clean cases, producing false alarms.",
+    "human_decision": "Executed 3 identical baseline runs across all cases, demonstrating high False Alarm Rate (26.7%). Formulated Prompt v2 enforcing strict severity boundaries to test if single prompt engineering variable could eliminate false alarms without hurting recall.",
+    "action_verification": "Logged raw review verdicts across runs 1-3 in ops/evals/results.csv.",
+    "limitation": "Generic code review prompts trigger hyper-vigilant nitpicking on idiomatic, clean code snippets.",
+    "status": "applied",
+    "artifacts": [
+      "ops/evals/results.csv"
+    ]
+  },
+  {
+    "id": "20261101T094000Z-edit-add-custom-production-eval-cases",
+    "timestamp": "2026-11-01T09:40:00Z",
+    "stage": "task-4-evals",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "edit",
+    "related_ids": [
+      "20261101T090000Z-agent-eval-harness-execution"
+    ],
+    "parent_task": null,
+    "context": "Task 4 - Production Fixture Expansion",
+    "request": "add 3 more custom production-grade test cases and update the related files",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "write_file",
+      "edit_file"
+    ],
+    "suggestion": "AI authored Cases 11 and 12, then proposed expanding with Cases 13 (sync-over-async thread pool exhaustion via .GetAwaiter().GetResult()), 14 (unhandled 30s timeout missing CancellationToken), and 15 (clean defensive IdempotencyValidationFilter).",
+    "human_decision": "Approved and incorporated all 5 custom test fixtures (10 defect cases + 5 clean cases total = 15 cases). Benchmarked all 15 cases across 4 runs (60 total reviews) and authored full statistical analysis showing Prompt v2 achieved 100% Caught Rate and 0.0% False Alarm Rate.",
+    "action_verification": "Generated unified git diff fixtures in ops/evals/cases/case-11.diff through case-15.diff; populated ops/evals/results.csv and synthesized statistical insights in ops/evals/results.md.",
+    "limitation": "Manual verification of 60 individual diff-review intersections was required to ensure no stochastic regression occurred.",
+    "status": "applied",
+    "artifacts": [
+      "ops/evals/cases/case-11.diff",
+      "ops/evals/cases/case-12.diff",
+      "ops/evals/cases/case-13.diff",
+      "ops/evals/cases/case-14.diff",
+      "ops/evals/cases/case-15.diff",
+      "ops/evals/results.csv",
+      "ops/evals/results.md"
+    ]
+  },
+  {
+    "id": "20261101T103000Z-plan-lethal-trifecta-governance",
+    "timestamp": "2026-11-01T10:30:00Z",
+    "stage": "task-5-risk-audit-and-metrics",
+    "agent": "agent",
+    "agent_name": "Copilot Staff Architect Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "plan",
+    "related_ids": [],
+    "parent_task": null,
+    "context": "Task 5 - Lethal Trifecta Security Architecture",
+    "request": "proceed with task 5",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "read_file",
+      "write_file"
+    ],
+    "suggestion": "AI suggested keeping autonomous execution capabilities while mitigating risks via prompt filtering and LLM safety guards alone.",
+    "human_decision": "Firmly rejected prompt-level defenses for financial infrastructure. Prompt injections cannot be reliably blocked at the prompt level. Formally broke Leg 3 of the Lethal Trifecta (Execution): completely revoked write credentials, configured Monitoring Reader RBAC, and inserted an immutable human approval air-gap for any action triggering payments or configuration changes.",
+    "action_verification": "Documented threat model, attack trees, emergency kill-switch CLI procedures, and audit log schemas in docs/governance/risk-audit-and-metrics.md.",
+    "limitation": "AI models frequently propose soft prompt guards instead of hard architectural and cryptographic boundaries.",
+    "status": "modified",
+    "artifacts": [
+      "docs/governance/risk-audit-and-metrics.md"
+    ]
+  },
+  {
+    "id": "20261101T111000Z-agent-dora-metrics-calculation",
+    "timestamp": "2026-11-01T11:10:00Z",
+    "stage": "task-5-risk-audit-and-metrics",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "agent",
+    "related_ids": [
+      "20261101T103000Z-plan-lethal-trifecta-governance"
+    ],
+    "parent_task": null,
+    "context": "Task 5 - Empirical CI/CD Pipeline Measurement",
+    "request": "calculate the actual DORA metrics from our pipeline run timings csv file and put them in the report",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "read_file",
+      "edit_file"
+    ],
+    "suggestion": "AI proposed using standard industry DORA benchmarks (e.g. DORA 2023 report averages) instead of calculating local values.",
+    "human_decision": "Overruled synthetic data. Insisted on parsing actual telemetry in ops/pipeline/run-timings.csv: computed exact CI Failure Rate of 10.0% (2 out of 20 runs failed: runs 10 and 17), average duration of 31.34 minutes, and average PR cycle time of 4.97 days.",
+    "action_verification": "Audited 20 rows of run-timings.csv and embedded real empirical statistics into docs/governance/risk-audit-and-metrics.md.",
+    "limitation": "LLM hallucinated generic benchmark statistics until forced to parse local CSV data.",
+    "status": "applied",
+    "artifacts": [
+      "docs/governance/risk-audit-and-metrics.md",
+      "ops/pipeline/run-timings.csv"
+    ]
+  },
+  {
+    "id": "20261101T123000Z-edit-dark-mode-theme-remediation",
+    "timestamp": "2026-11-01T12:30:00Z",
+    "stage": "task-1-architecture",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "edit",
+    "related_ids": [
+      "20261031T090000Z-edit-fix-mermaid-parser-syntax"
+    ],
+    "parent_task": null,
+    "context": "Accessibility & Theme Adaptability Fix",
+    "request": "why is the text in the diagram hard to read in dark mode? fix it and update the web styles too",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "read_file",
+      "edit_file"
+    ],
+    "suggestion": "Hardcoded pastel fills and inline <code> tags in Mermaid diagrams caused unreadable text contrast against dark backgrounds.",
+    "human_decision": "Removed all hardcoded fill colors and inline HTML font styles from Mermaid nodes, allowing native GitHub/IDE theme adaptivity. Added @media (prefers-color-scheme: dark) CSS variables to backend/src/InvoiceApp.Api/wwwroot/styles.css to guarantee WCAG 2.1 AA contrast.",
+    "action_verification": "Inspected rendered Mermaid SVGs under both dark and light modes; verified contrast ratio > 4.5:1 across all nodes and edges.",
+    "limitation": "Static code generators often hardcode hex fills that break when host theme switches.",
+    "status": "applied",
+    "artifacts": [
+      "docs/architecture/task-1-as-built-and-target-architecture.md",
+      "backend/src/InvoiceApp.Api/wwwroot/styles.css"
+    ]
+  },
+  {
+    "id": "20261101T133000Z-agent-dotnet-environment-and-test-run",
+    "timestamp": "2026-11-01T13:30:00Z",
+    "stage": "verification",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "agent",
+    "related_ids": [
+      "20261031T091500Z-agent-arch-test-implementation"
+    ],
+    "parent_task": null,
+    "context": "Local Environment .NET SDK CLI Execution",
+    "request": "add dotnet to the system and make sure the CLI execution command executes and publish the results in task 1 md file as well",
+    "skills_used": [],
+    "subagents_used": [],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "run_command",
+      "edit_file"
+    ],
+    "suggestion": "Attempted to run dotnet CLI directly, but encountered 'No .NET SDKs were found' because .NET 8 runtime was isolated in Program Files while .NET 10 SDK was in LocalAppData.",
+    "human_decision": "Diagnosed environment path mismatch. Linked .NET 8 runtime folders into LocalAppData dotnet directory and prepended to PATH. Successfully executed architecture test suite (3 passed in 318ms) and full solution test suite (10 passed in 402ms). Embedded live CLI execution logs into documentation.",
+    "action_verification": "Executed 'dotnet test backend/InvoiceApp.sln --filter FullyQualifiedName~ArchitectureTests' with 0 errors. Verified test output captured in task-1-as-built-and-target-architecture.md.",
+    "limitation": "AI could not infer Windows system environment variable discrepancies without running shell diagnostic commands.",
+    "status": "applied",
+    "artifacts": [
+      "docs/architecture/task-1-as-built-and-target-architecture.md"
+    ]
+  },
+  {
+    "id": "20261101T134500Z-agent-live-browser-verification",
+    "timestamp": "2026-11-01T13:45:00Z",
+    "stage": "verification",
+    "agent": "agent",
+    "agent_name": "Copilot Senior Engineer Agent",
+    "agent_type": "built-in",
+    "ai_tool": "Copilot",
+    "model": "gpt-luna-6",
+    "mode": "agent",
+    "related_ids": [
+      "20261101T133000Z-agent-dotnet-environment-and-test-run"
+    ],
+    "parent_task": null,
+    "context": "Live Web Application Runtime Inspection",
+    "request": "I have installed the .net. now carry on and use the /browser to show me as well",
+    "skills_used": [],
+    "subagents_used": [
+      {
+        "name": "browser",
+        "type": "built-in",
+        "task": "Navigate to http://localhost:5000 and capture DOM structure and visual rendering",
+        "status": "completed"
+      }
+    ],
+    "mcp_tools_used": [],
+    "tools_used": [
+      "run_command",
+      "invoke_subagent"
+    ],
+    "suggestion": "AI spawned web API background daemon process on port 5000 and dispatched the browser subagent to inspect the running web application.",
+    "human_decision": "Validated that the server returned HTTP 200, served vanilla HTML5 and app.js without React/Vue overhead, and verified invoice approval workflow end-to-end.",
+    "action_verification": "Inspected background daemon task-253, confirmed port 5000 binding, and reviewed browser agent navigation logs and DOM tree.",
+    "limitation": "Required background process management and subagent orchestration across isolated process boundaries.",
+    "status": "applied",
+    "artifacts": [
+      "backend/src/InvoiceApp.Api/wwwroot/index.html",
+      "backend/src/InvoiceApp.Api/wwwroot/app.js"
+    ]
+  }
+]

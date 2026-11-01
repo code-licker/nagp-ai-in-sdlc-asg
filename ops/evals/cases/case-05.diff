@@ -1,0 +1,18 @@
+diff --git a/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs b/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs
+--- a/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs
++++ b/backend/src/InvoiceApp.Api/Controllers/InvoicesController.cs
+@@ -41,6 +41,14 @@ public class InvoicesController : ApiControllerBase
+         return Handle(() => _repository.Add(invoice));
+     }
+
++    [HttpDelete("{id}")]
++    public IActionResult Delete(string id)
++    {
++        _repository.Delete(id);
++        _logger.LogInformation("Invoice {InvoiceId} deleted by {User}", id, CurrentUser.Name);
++        return NoContent();
++    }
++
+     [HttpPut("{id}")]
+     [RequireRole("Admin")]
+     public IActionResult Update(string id, [FromBody] UpdateInvoiceRequest request)

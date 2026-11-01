@@ -1,0 +1,74 @@
+# Read-only inspection of the messaging namespace
+# Operator: s.brennan   Run at: 2026-01-29T14:28:00Z
+# All commands below are read-only. Nothing was modified.
+
+$ az servicebus topic show --namespace-name sb-invoice-prod --name invoice-events --query "{name:name,status:status,sizeInBytes:sizeInBytes}"
+{
+  "name": "invoice-events",
+  "status": "Active",
+  "sizeInBytes": 419584
+}
+
+$ az servicebus topic subscription list --namespace-name sb-invoice-prod --topic-name invoice-events --query "[].{name:name,active:countDetails.activeMessageCount,dead:countDetails.deadLetterMessageCount,status:status}" -o table
+Name                   Active    Dead    Status
+---------------------  --------  ------  --------
+notification-worker    0         0       Active
+analytics-export       0         0       Active
+audit-archive          54        0       Active
+
+$ az servicebus topic subscription rule list --namespace-name sb-invoice-prod --topic-name invoice-events --subscription-name notification-worker -o json
+[
+  {
+    "name": "approved-only",
+    "filterType": "CorrelationFilter",
+    "correlationFilter": {
+      "properties": {
+        "eventType": "InvoiceApproved"
+      }
+    },
+    "action": null
+  }
+]
+
+$ az servicebus topic subscription rule list --namespace-name sb-invoice-prod --topic-name invoice-events --subscription-name audit-archive -o json
+[
+  {
+    "name": "catch-all",
+    "filterType": "SqlFilter",
+    "sqlFilter": {
+      "sqlExpression": "1=1"
+    },
+    "action": null
+  }
+]
+
+$ az servicebus topic show --namespace-name sb-invoice-prod --name invoice-events --query "{maxSize:maxSizeInMegabytes,ttl:defaultMessageTimeToLive}"
+{
+  "maxSize": 1024,
+  "ttl": "P14D"
+}
+
+# Peek at the most recent messages held by the catch-all subscription.
+# Peek does not remove or lock messages.
+
+$ az servicebus topic subscription message peek --namespace-name sb-invoice-prod --topic-name invoice-events --subscription-name audit-archive --max-count 3
+[
+  {
+    "messageId": "5c48a3d7-1e96-4b02-93d5-28f0ac617b9e",
+    "enqueuedTimeUtc": "2026-01-29T14:02:44Z",
+    "applicationProperties": { "eventType": "invoice.approved", "source": "invoice-approval" },
+    "body": { "invoiceId": "INV-44627", "amount": 18420.00, "approvedBy": "p.iyer" }
+  },
+  {
+    "messageId": "97e2f508-3b41-4daa-8c09-d61b74e035c2",
+    "enqueuedTimeUtc": "2026-01-29T13:21:55Z",
+    "applicationProperties": { "eventType": "invoice.approved", "source": "invoice-approval" },
+    "body": { "invoiceId": "INV-44604", "amount": 7310.50, "approvedBy": "k.matsuda" }
+  },
+  {
+    "messageId": "14d0b9f3-7a28-4c57-b6e1-5f3a82c90ed6",
+    "enqueuedTimeUtc": "2026-01-29T12:33:07Z",
+    "applicationProperties": { "eventType": "invoice.approved", "source": "invoice-approval" },
+    "body": { "invoiceId": "INV-44581", "amount": 2290.00, "approvedBy": "p.iyer" }
+  }
+]

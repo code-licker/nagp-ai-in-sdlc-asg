@@ -1,0 +1,236 @@
+:root {
+  --ink: #16202a;
+  --muted: #4f5b67;
+  --line: #d5cfc2;
+  --bg: #f4f1ea;
+  --card: #fbfaf6;
+  --accent: #0f766e;
+  --warn: #b4452f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--ink);
+  color: #f4f1ea;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+#session-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+h2 {
+  margin: 0 0 16px;
+}
+
+section,
+form,
+table {
+  background: var(--card);
+}
+
+#login-view,
+#invoices-panel,
+#approvals-panel {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+form {
+  display: grid;
+  gap: 8px;
+  max-width: 360px;
+  margin-bottom: 24px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button.secondary {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+button.danger {
+  background: var(--warn);
+}
+
+[role="tablist"] {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+[role="tab"] {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+[role="tab"][aria-selected="true"] {
+  background: var(--ink);
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.status {
+  font-weight: 600;
+}
+
+.status-PendingApproval {
+  color: #9a6a00;
+}
+
+.status-Approved {
+  color: var(--accent);
+}
+
+.status-Rejected {
+  color: var(--warn);
+}
+
+#pending-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+#pending-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 16px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.reject-row {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+}
+
+.reject-row input {
+  flex: 1;
+}
+
+[role="alert"] {
+  color: var(--warn);
+  margin: 4px 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e2e8f0;
+    --muted: #94a3b8;
+    --line: #334155;
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #2dd4bf;
+    --warn: #f87171;
+  }
+
+  header {
+    background: #020617;
+    color: #f8fafc;
+  }
+
+  input {
+    background: #0f172a;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  button.secondary {
+    background: #1e293b;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  [role="tab"] {
+    background: #1e293b;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  [role="tab"][aria-selected="true"] {
+    background: var(--accent);
+    color: #0f172a;
+  }
+
+  .status-PendingApproval {
+    color: #facc15;
+  }
+}
